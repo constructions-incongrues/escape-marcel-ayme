@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script language="javascript">
+            function pasuser(form) { 
+                if (form.pass.value=="femur") { 
+                    location = "/puzzle.html"; 
+                } else { 
+                    alert("MOT DE PASSE INVALIDE") 
+                }
+                return false;
+            } 
+        </script>
+
+        <style>
+            input {
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                padding: 5px;
+                margin: 5px;
+            }
+        </style>
+</head>
+
+<body>
+    <form name="login" onsubmit="return pasuser(this);">
+        <input name="pass" size="5" type="password" autofocus>
+    </form>
+</body>
