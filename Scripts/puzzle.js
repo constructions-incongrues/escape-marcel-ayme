@@ -93,6 +93,7 @@
     var $help = $("lb_help");
     var $game = $("game");
     var $title = $("title");
+    var $recompense = $("recompense");
 
     var g_img_nr;
     var g_sliderPos;
@@ -940,7 +941,14 @@
             if (g_set === g_cols * g_rows) {
                 $bt_close.classList.add("dn");
                 if (g_sound) {
-                    window.location.replace('/escape-marcel-ayme/solution.html');
+                    // window.location.replace('/escape-marcel-ayme/solution.html');
+                    // document.getElementById('game').style.display = 'none';
+                    // document.getElementById('recompense').style.display = 'block';
+                    $game.classList.remove("swipe-in");
+                    $recompense.classList.remove("swipe-out");
+                    $game.classList.add("swipe-in-left");
+                    $recompense.classList.add("swipe-out-right");
+            
                 }
             }
         }, 500);
@@ -1538,7 +1546,7 @@
                 content_formatting();
             }, 500);
 
-            mediumClick();
+            easyClick();
         }
     };
 

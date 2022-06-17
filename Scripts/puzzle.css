@@ -44,14 +44,17 @@ header {
     margin: 5px;
 }
 #game {
-    /* transform: translateX(100vw); */
+    transform: translateX(100vw);
     opacity: 0;
-    /* visibility: hidden; */
 }
 #title {
     transform: translateX(100vw);
     opacity: 0;
     display: none;
+}
+#recompense {
+    transform: translateX(100vw);
+    opacity: 0;
 }
 .swipe-in {
     animation-name: swipe-in;
