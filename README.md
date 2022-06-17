@@ -1,13 +1,16 @@
-grrd's Puzzle
-=================
+# Marcel Aymé Escape Jeu 2022
 
-grrd's Puzzle is a HTML5 jigsaw puzzle game for your smartphone or desktop. 
-You can choose from various images or play with your own pictures at the level of difficulty of your choice. 
-It is realized with the kinetic.js canvas framework.
-grrd's Puzzle is free, no ads, no in-app purchases.
+## Développement local
 
+À la racine du projet, exécuter la commande suivante : 
 
-* Copyright (c) 2012 Gerard Tyedmers, grrd@gmx.net
-* Licensed under the MPL License
+```
+docker-compose up
+```
 
-Click here to play: <https://grrd01.github.io/Puzzle/>
+Cela rend accessibles les pages suivantes :
+
+- Mot de passe : http://localhost:8080/index.html 
+- Puzzle : http://localhost:8080/puzzle.html 
+- Solution : http://localhost:8080/solution.html 
+
