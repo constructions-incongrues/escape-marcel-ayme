@@ -6,9 +6,11 @@
         <script language="javascript">
             function pasuser(form) { 
                 if (form.pass.value=="femur") { 
-                    location = "/escape-marcel-ayme/puzzle.html"; 
+                    // location = "/escape-marcel-ayme/puzzle.html"; 
+                    document.getElementById('closed').style.display = "none";
+                    document.getElementById('open').style.display = "block";
                 } else { 
-                    alert("MOT DE PASSE INVALIDE") 
+                    alert("MOT DE PASSE INVALIDE")
                 }
                 return false;
             } 
@@ -28,4 +30,10 @@
     <form name="login" onsubmit="return pasuser(this);">
         <input name="pass" size="5" type="password" autofocus>
     </form>
+    <center>
+        <img id="closed" src="Images/ui/closed.png">
+        <a href="puzzle.html">
+            <img id="open" src="Images/ui/open.png" style="display: none;">
+        </a>
+    </center>
 </body>
