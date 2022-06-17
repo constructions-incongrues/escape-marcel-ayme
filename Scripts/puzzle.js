@@ -1546,7 +1546,7 @@
                 content_formatting();
             }, 500);
 
-            easyClick();
+            mediumClick();
         }
     };
 
