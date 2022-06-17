@@ -4,6 +4,6 @@ services:
   nginx:
     image: nginx
     volumes:
-      - .:/usr/share/nginx/html
+      - .:/usr/share/nginx/html/escape-marcel-ayme/
     ports:
       - 8080:80

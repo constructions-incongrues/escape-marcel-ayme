@@ -940,7 +940,7 @@
             if (g_set === g_cols * g_rows) {
                 $bt_close.classList.add("dn");
                 if (g_sound) {
-                    window.location.replace('/solution.html');
+                    window.location.replace('/escape-marcel-ayme/solution.html');
                 }
             }
         }, 500);
