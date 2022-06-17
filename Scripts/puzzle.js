@@ -574,7 +574,7 @@
         $imgHelp.style.padding = "5px";
         $help.innerHTML = document.webL10n.get("lb_load");
         $("iCloseHelp").classList.add("dn");
-        fShowPopup($popupHelp);
+        // fShowPopup($popupHelp);
         g_back_g_grid = $b_back_g_grid.checked;
         g_back_g_image = $b_back_g_image.checked;
         g_rotate = $b_rotate.checked;
