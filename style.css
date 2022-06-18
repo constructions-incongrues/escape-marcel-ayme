@@ -55,6 +55,7 @@
     padding: 0;
 }
 
+img {width: 50%;height: 50%;}
 html {
     height: 120vh;
 }
