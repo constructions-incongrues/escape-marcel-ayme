@@ -156,9 +156,33 @@ const placeMatchArray = [
     Initialization - Input - Keys
 
 ==================================== */
+const characters ='abcdghijklnopqstvwxyz0123456789⛮⛭☠';
+
+function generateString(length) {
+    let result = 'femur';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+
 function initializeKeys() {
     // initialize event listeners on keys only
     keys.forEach(key => key.addEventListener('click', handleKeyDown));
+    var charList = generateString(18).split('');
+    keys.forEach(function(key) {
+        console.log(charList)
+        char = charList[Math.floor(Math.random() * charList.length)];
+        key.innerText = char;
+        charList = charList.filter(function(value) {
+            console.log(value, char) 
+            return value != char;
+        });
+        console.log(charList)
+
+    });
 
     // initialize positions by row, adjusting 
     // with offset on every other row;
@@ -191,7 +215,6 @@ function initializeKeys() {
         pos.style.left = `${spread*i++}em`;
     });
 }
-
 
 /* ====================================
 
@@ -263,11 +286,16 @@ function handleKeyDown() {
                 e.previousElementSibling.classList.remove("armDown");
                 document.getElementById('bones').style.display = 'block';
             })
+            initializeKeys();
         }, 500);
     }
     if (document.getElementById('input').value == 'femur') {
         document.location = 'puzzle.html';
     }
+}
+
+function getPadCharacter() {
+
 }
 
 /* ===================================
