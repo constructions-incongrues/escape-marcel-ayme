@@ -22,5 +22,5 @@ jobs:
           mention: 'here'
           mention_if: 'failure'
           commit: true
-          channel: escape-game-2022
+          channel: '#escape-game-2022'
           url: ${{ secrets.ROCKETCHAT_WEBHOOK }}
