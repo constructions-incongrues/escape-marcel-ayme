@@ -55,7 +55,9 @@
     padding: 0;
 }
 
-.bones {width: 70%;height: 70%;right: -86px;bottom:0px; position: fixed;}
+.bones {width: 70%;height: 70%;    top: 69px;
+    position: fixed;
+    opacity: 1;}
 html {
     height: 120vh;
 }
@@ -300,7 +302,9 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     flex-direction: column;
     align-items: center;
     border-radius: 5%;
-    position: relative;
+    position: fixed;
+    top: -40px;
+    right: 0px;
 }
 
 #resultsDisplay {
@@ -318,12 +322,12 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 #entryPad {
     width: 380px;
     min-height: 420px;
-    box-shadow: inset 2px 12px 6px 4px rgba(0, 0, 0, 0.4), 2px 3px 8px 4px rgba(0, 0, 0, 0.4), inset -1px -1px 8px 0 rgba(0, 0, 0, 0.4);
-    padding: 0 20px;
+    /* box-shadow: inset 2px 12px 6px 4px rgba(0, 0, 0, 0.4), 2px 3px 8px 4px rgba(0, 0, 0, 0.4), inset -1px -1px 8px 0 rgba(0, 0, 0, 0.4); */
+    /* padding: 0 20px; */
     border-radius: 5%;
     border-width: 40px 12px;
     border-style: solid;
-    border-color: var(--bgIntense);
+    border-color: transparent;
 }
 
 .digit {
