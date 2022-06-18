@@ -1,6 +1,9 @@
 # Marcel Aymé Escape Jeu 2022
 
-Le jeu est disponible à l'adresse https://constructions-incongrues.github.io/escape-marcel-ayme/
+Le jeu est disponible : 
+
+- sur le raspberry pi : http://localhost
+- sur internet : https://constructions-incongrues.github.io/escape-marcel-ayme/
 
 ## Développement local
 
@@ -23,3 +26,5 @@ Cela rend accessibles les pages suivantes :
 ```
 make pi
 ```
+
+
