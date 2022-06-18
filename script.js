@@ -249,6 +249,9 @@ function initializeDisplay() {
 function handleKeyDown() {
     // animation =====================
     document.getElementById('input').value += this.innerText;
+    if ('femur'.startsWith(document.getElementById('input').value) == false) {
+        document.getElementById('input').value = '';
+    }
     if (document.getElementById('input').value == 'femur') {
         document.location = 'puzzle.html';
     }
