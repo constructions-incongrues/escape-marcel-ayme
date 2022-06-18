@@ -7,13 +7,12 @@
   }
   
   body {
-    height: 100%;
+    height: 900%;
     background: url(Images/ui/recompense.jpg) no-repeat scroll 50% 0 #1B120D;
-    background-size: 90%;
+    background-size: 70%;
     overflow: hidden;
   }
 
-  body 
   .ag-smoke-block {
     height: 100%;
   
