@@ -267,10 +267,10 @@
             $imgHelp.style.padding = null;
         }, 500);
         document.getElementsByTagName("FIELDSET")[0].disabled = true;
-        $title.classList.remove("swipe-out-right");
-        $game.classList.remove("swipe-in-left");
-        $title.classList.add("swipe-out");
-        $game.classList.add("swipe-in");
+        // $title.classList.remove("swipe-out-right");
+        // $game.classList.remove("swipe-in-left");
+        // $title.classList.add("swipe-out");
+        // $game.classList.add("swipe-in");
         setTimeout(function () {
             var l_allPieces = g_layer.getChildren();
             for (j = 0; j < l_allPieces.length; j += 1) {
@@ -1105,10 +1105,12 @@
             }
         }
         document.getElementsByTagName("FIELDSET")[0].disabled = false;
-        $title.classList.remove("swipe-out");
-        $game.classList.remove("swipe-in");
-        $title.classList.add("swipe-out-right");
-        $game.classList.add("swipe-in-left");
+        $title.style.display = 'none';
+        $game.style.display = 'block';
+        // $title.classList.remove("swipe-out");
+        // $game.classList.remove("swipe-in");
+        // $title.classList.add("swipe-out-right");
+        // $game.classList.add("swipe-in-left");
         content_formatting();
         setTimeout(function () {
             content_formatting();

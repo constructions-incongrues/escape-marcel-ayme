@@ -43,9 +43,9 @@ header {
 .content {
     margin: 5px;
 }
-#game {
-    transform: translateX(100vw);
-    opacity: 0;
+
+#bt_close {
+    display: none;
 }
 #title {
     transform: translateX(100vw);
