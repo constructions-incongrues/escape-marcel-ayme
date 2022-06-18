@@ -5,7 +5,7 @@
   
   html, body {
     height: 100%;
-    background: url(Images/ui/recompense.jpg)) no-repeat scroll 50% 0 #1B120D;
+    background: url(Images/ui/recompense.jpg) no-repeat scroll 50% 0 #1B120D;
     background-size: cover;
   
     overflow: hidden;
