@@ -156,7 +156,7 @@ const placeMatchArray = [
     Initialization - Input - Keys
 
 ==================================== */
-const characters ='abcdghijklnopqstvwxyz0123456789⛮⛭☠';
+const characters ='ABCDGHIJKLNOPQSTVWXYZabcdghijklnopqstvwxyz0123456789⛮⛭☠';
 
 function generateString(length) {
     let result = 'femur';
