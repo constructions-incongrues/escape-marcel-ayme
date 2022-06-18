@@ -658,3 +658,9 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
         left: 6px;
     }
 }
+
+.note {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+}
