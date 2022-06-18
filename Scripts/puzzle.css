@@ -52,10 +52,6 @@ header {
     opacity: 0;
     display: none;
 }
-#recompense {
-    transform: translateX(100vw);
-    opacity: 0;
-}
 .swipe-in {
     animation-name: swipe-in;
     animation-fill-mode: forwards;
