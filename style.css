@@ -664,3 +664,5 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     bottom: 30px;
     left: 40px;
 }
+
+.note p {width: 100px;height: 100px;}
