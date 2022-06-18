@@ -249,28 +249,24 @@ function initializeDisplay() {
 function handleKeyDown() {
     // animation =====================
     document.getElementById('input').value += this.innerText;
-    if ('femur'.startsWith(document.getElementById('input').value) == false) {
-        document.getElementById('input').value = '';
-    }
-    if (document.getElementById('input').value == 'femur') {
-        document.location = 'puzzle.html';
-    }
 
     // pressdown on key and arm
     this.classList.add("roundKiDown");
     this.previousElementSibling.classList.add("armDown");
 
-    // release
-    setTimeout(() => {
-        this.classList.remove("roundKiDown");
-        this.previousElementSibling.classList.remove("armDown");
-    }, 500);
-
     // ===================== animation
-
-    // action directed by dataset value,
-    // with conversion to integer argument
-    processInput(parseInt(this.dataset.input, 10));
+    if ('femur'.startsWith(document.getElementById('input').value) == false) {
+        document.getElementById('input').value = '';
+        setTimeout(() => {
+            document.querySelectorAll('.roundKiDown').forEach(function(e) {
+                e.classList.remove("roundKiDown");
+                e.previousElementSibling.classList.remove("armDown");
+            })
+        }, 500);
+    }
+    if (document.getElementById('input').value == 'femur') {
+        document.location = 'puzzle.html';
+    }
 }
 
 /* ===================================
