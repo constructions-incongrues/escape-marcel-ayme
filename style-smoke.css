@@ -3,12 +3,17 @@
     margin: 0 auto;
   }
   
-  html, body {
+  html {    height: 100%;
+  }
+  
+  body {
     height: 100%;
     background: url(Images/ui/recompense.jpg) no-repeat scroll 50% 0 #1B120D;
     background-size: 90%;
     overflow: hidden;
   }
+
+  body 
   .ag-smoke-block {
     height: 100%;
   
