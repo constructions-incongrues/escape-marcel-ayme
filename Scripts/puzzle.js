@@ -1353,7 +1353,7 @@
                 if (!g_theme_imgs) {
                     g_theme_imgs = true;
                     $("t_europe").src = "Images/europe/theme.png";
-                    $("t_africa").src = "Images/africa/theme.png";
+                    $("t_africa").src = "Images/animals/theme.png";
                     $("t_asia").src = "Images/asia/theme.png";
                     $("t_america").src = "Images/america/theme.png";
                     $("t_animals").src = "Images/animals/theme.png";
@@ -1612,7 +1612,7 @@
 
     function popupNew() {
         if (new Date("05/01/2020") > new Date() && g_theme !== "africa" && localStorageOK && localStorage.getItem("s_new_theme") !== "africa") {
-            $imgHelp.src = "Images/africa/theme.png";
+            $imgHelp.src = "Images/animals/theme.png";
             $help.innerHTML = document.webL10n.get("lb_new_theme") + " " + document.webL10n.get("lb_africa");
             fShowPopup($popupHelp);
             localStorage.setItem("s_new_theme", "africa");

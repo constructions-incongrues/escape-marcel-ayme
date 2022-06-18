@@ -11,8 +11,8 @@ var CACHE_VERSION = "v2.10";
 var CACHE = CACHE_NAME + "-" + CACHE_VERSION;
 
 var urlsToCache = [
-    "index.html",
     "Images/4inarow.svg",
+    "Images/animals/theme.png",
     "Images/bullets0.svg",
     "Images/bullets0o.svg",
     "Images/bullets1.svg",
@@ -20,14 +20,14 @@ var urlsToCache = [
     "Images/dice.svg",
     "Images/down.svg",
     "Images/dummy.png",
-    "Images/easy.svg",
     "Images/easy_gold.svg",
+    "Images/easy.svg",
     "Images/escfullscreen.svg",
-    "Images/favicon.ico",
     "Images/favicon_dark.ico",
+    "Images/favicon.ico",
     "Images/fullscreen.svg",
-    "Images/hard.svg",
     "Images/hard_gold.svg",
+    "Images/hard.svg",
     "Images/info.svg",
     "Images/loading.svg",
     "Images/lock.svg",
@@ -35,8 +35,8 @@ var urlsToCache = [
     "Images/medal1.svg",
     "Images/medal2.svg",
     "Images/medal3.svg",
-    "Images/medium.svg",
     "Images/medium_gold.svg",
+    "Images/medium.svg",
     "Images/memo.svg",
     "Images/next.svg",
     "Images/ok.svg",
@@ -46,28 +46,10 @@ var urlsToCache = [
     "Images/puzzle.svg",
     "Images/settings.svg",
     "Images/tictactoe.svg",
-    "Images/title1.png",
     "Images/title_wide.png",
+    "Images/title1.png",
+    "Images/ui/recompense.jpg",
     "Images/x.svg",
-    "Images/africa/theme.png",
-    "Images/america/theme.png",
-    "Images/animals/theme.png",
-    "Images/asia/theme.png",
-    "Images/europe/theme.png",
-    "Images/flowers/theme.png",
-    "Images/mascha/theme.png",
-    "Images/mascha2/theme.png",
-    "Images/mascha3/theme.png",
-    "Images/mascha4/theme.png",
-    "Images/shrek/theme.png",
-    "Images/tricky/theme.png",
-    "Scripts/exif.js",
-    "Scripts/kinetic-v4.7.4.min.js",
-    "Scripts/l10n.js",
-    "Scripts/puzzle.css",
-    "Scripts/puzzle.js",
-    "Scripts/swipe.css",
-    "Scripts/swipe.js",
     "Locales/ar/puzzle.properties",
     "Locales/bn/puzzle.properties",
     "Locales/cs/puzzle.properties",
@@ -78,6 +60,7 @@ var urlsToCache = [
     "Locales/hr/puzzle.properties",
     "Locales/hu/puzzle.properties",
     "Locales/it/puzzle.properties",
+    "Locales/locales.ini",
     "Locales/nl/puzzle.properties",
     "Locales/pl/puzzle.properties",
     "Locales/pt_BR/puzzle.properties",
@@ -89,40 +72,62 @@ var urlsToCache = [
     "Locales/ta/puzzle.properties",
     "Locales/tr/puzzle.properties",
     "Locales/ur/puzzle.properties",
-    "Locales/zh/puzzle.properties",
     "Locales/zh_CN/puzzle.properties",
-    "Locales/locales.ini",
+    "Locales/zh/puzzle.properties",
+    "puzzle.html",
+    "Scripts/debug.js",
+    "Scripts/exif.js",
+    "Scripts/kinetic-v4.7.4.min.js",
+    "Scripts/l10n.js",
+    "Scripts/puzzle.css",
+    "Scripts/puzzle.js",
+    "Scripts/swipe.css",
+    "Scripts/swipe.js",
     "Sounds/click.mp3",
-    "Sounds/click.ogg",
     "Sounds/ding.mp3",
-    "Sounds/ding.ogg"
+    "Sounds/labo.mp3"
 ];
 
-self.addEventListener("install", function (event) {
-    // Perform install steps
+// self.addEventListener("install", function (event) {
+//     // Perform install steps
+//     event.waitUntil(
+//         caches.open(CACHE)
+//             .then(function (cache) {
+//                 return cache.addAll(urlsToCache);
+//             })
+//     );
+// });
+
+self.addEventListener("install", (event) => {
     event.waitUntil(
-        caches.open(CACHE)
-            .then(function (cache) {
-                return cache.addAll(urlsToCache);
-            })
-    );
-});
+        (async() => {
+            try {
+                cache_obj = await caches.open(CACHE)
+                cache_obj.addAll(urlsToCache)
+            }
+            catch (error) {
+                console.log('Error caching')
+                console.log(error)
+            }
+        })()
+    )
+} )
 
 self.addEventListener("fetch", function (event) {
     event.respondWith(
         caches.match(event.request)
             .then(function (response) {
-                // Cache hit - return response
                 if (response) {
                     return response;
                 }
 
                 var fetchRequest = event.request.clone();
-
+                
                 return fetch(fetchRequest).then(
                     function (response) {
                         // Check if we received a valid response
                         if (!response || response.status !== 200 || response.type !== "basic") {
+                            console.log(response);
                             return response;
                         }
 
