@@ -2,6 +2,8 @@ name: Github Pages
 on: [push]
 jobs:
   gh-pages:
+    name: Deploy to Github Pages
+    runs-on: ubuntu-latest
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
