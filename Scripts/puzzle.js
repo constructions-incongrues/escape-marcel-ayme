@@ -1101,7 +1101,6 @@
                 setLockMedal();
                 if (g_sound) {
                     alert('2');
-                    // document.getElementById("ding_sound").play();
                 }
             }
         }

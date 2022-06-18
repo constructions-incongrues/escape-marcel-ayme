@@ -84,7 +84,6 @@ var urlsToCache = [
     "Scripts/swipe.css",
     "Scripts/swipe.js",
     "Sounds/click.mp3",
-    "Sounds/ding.mp3",
     "Sounds/labo.mp3"
 ];
 
