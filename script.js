@@ -248,6 +248,10 @@ function initializeDisplay() {
 
 function handleKeyDown() {
     // animation =====================
+    document.getElementById('input').value += this.innerText;
+    if (document.getElementById('input').value == 'femur') {
+        document.location = 'puzzle.html';
+    }
 
     // pressdown on key and arm
     this.classList.add("roundKiDown");
