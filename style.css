@@ -1,4 +1,116 @@
-/* -----------------------------------
+
+
+.matchWrapper {
+    position: relative;    
+    display:flex;  
+    justify-content:center;
+    width:100%;
+    height:320px;
+    margin-top:1rem;
+  }
+  
+  .flameWrapper {
+    position:relative;
+    margin-top:10px auto;
+    width: 60px;
+    height: 60px;
+    transform-origin:center bottom;
+    animation-name: flameAnim;
+    animation-duration:3ms;
+    animation-delay:300ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .flame{
+    position:absolute; 
+    left:50%;  
+    bottom:0;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5) translate(-50%, 0);
+    
+  }
+  
+  .flame--layer1{ 
+    width: 50px;
+    height: 50px;
+    background:OrangeRed;
+    box-shadow: 0px 0px 5px 4px OrangeRed;
+  }
+  
+  .flame--layer2{  
+    bottom:-10px;
+    width: 40px;
+    height: 40px;
+    background:orange;
+    box-shadow: 0px 0px 9px 4px orange;
+  }
+  
+  .flame--layer3{
+    bottom:-15px;
+    width: 30px;
+    height: 30px;
+    background:gold;
+    box-shadow: 0px 0px 9px 4px gold;
+  }
+  
+  .flame--layer4{  
+    bottom:-24px;
+    width: 20px;
+    height: 24px;
+    background:white;
+    box-shadow: 0px 0px 9px 4px white;
+  }
+  
+  .flameBase{  
+    position:absolute;
+    left:50%;
+    border-radius: 50%;
+    transform:translate(-50%, 0);
+  }
+  
+  .flameBase--layer1{
+    width: 32px;
+    height: 15px;  
+    top:20px; 
+    background: #581313;
+    box-shadow: 0px 0px 15px 10px #581313;
+  }
+  
+  .flameBase--layer2{
+    width: 32px;
+    height: 24px;  
+    top:96px; 
+    background: rgba(88, 19, 19, .4);
+    box-shadow: 0px 0px 15px 10px rgba(88, 19, 19, .3);
+  }
+  
+  @keyframes flameAnim{
+    0%   {transform: rotate(-2deg);}
+    20%  {transform: rotate(2deg);}
+    40%  {transform: rotate(-1deg);}
+    60%  {transform: rotate(2deg) scaleY(1.08);}
+    80%  {transform: rotate(-3deg) scaleY(0.90);}
+    100% {transform: rotate(1deg);}
+  }
+  
+  .matchBody {
+    position:absolute;
+    content: "";
+    width:32px;
+    height:230px;
+    top:80px;
+    left:50%;
+    transform: translate(-50%, 0);
+    background:#FFF8E1;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+  }
+  
+  /* -----------------------------------
 
     Variables
 
