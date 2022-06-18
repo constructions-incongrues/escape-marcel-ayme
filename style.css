@@ -299,6 +299,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     left: -0.85em;
     line-height: 2.8em;
     position: absolute;
+    cursor: pointer;
 }
 
 
