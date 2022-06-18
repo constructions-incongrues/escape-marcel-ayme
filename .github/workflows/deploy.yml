@@ -23,4 +23,5 @@ jobs:
           mention_if: 'failure'
           commit: true
           channel: '#escape-game-2022'
+          username: tristan
           url: ${{ secrets.ROCKETCHAT_WEBHOOK }}
