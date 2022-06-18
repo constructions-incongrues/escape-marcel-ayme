@@ -1,14 +1,16 @@
-name: Check Notification
-
+name: Github Pages
 on: [push]
-
 jobs:
-  notifications:
+  gh-pages:
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: main
+  notification:
     name: Rocket.Chat Notifications
     runs-on: ubuntu-latest
     steps:
       - uses: RocketChat/Rocket.Chat.GitHub.Action.Notification@1.1.1
-
       - name: with mention on failure only
         uses: ./
         with:
