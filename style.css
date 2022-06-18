@@ -1,0 +1,591 @@
+/* -----------------------------------
+
+    Variables
+
+----------------------------------- */
+/* note that :root is a pseudo class (!element), prefix with colon!! represents the document root */
+
+:root {
+    /* to center the content wrap,
+    set margin-left to negative .5 * contentWidth
+    */
+    --contentMarginLeft: -158px;
+    --contentWidth: 340px;
+    --shaftWidth: 290px;
+    /* spinner */
+    --shaftHeight: 0.9em;
+    --spinnerWidth: 255px;
+    --limitWidth: 9px;
+    --limitSpacer: 14px;
+    /* tooth front */
+    --toothSkew: 18deg;
+    --toothWidth: 4px;
+    --toothLeftMargin: 1px;
+    /* tooth behind */
+    --behindSkew: -8deg;
+    --behindWidth: 4px;
+    --behindLeftMargin: 4px;
+    /* decimal action */
+    --gearDim: 60px;
+    --dotDim: 14px;
+    --riserWidth: 8px;
+    --shuttleDim: 18px;
+    /* colors */
+    --decimalDim: #c7ad2c;
+    --decimalLit: #f07128;
+    --shaftWrapLit: #ea6417;
+    --golden: #c0b283;
+    --bgIntense: #241f1f;
+    /* armLengths & kiPostions */
+    --oneDim: 270px;
+    --twoDim: 210px;
+    --threeDim: 150px;
+    --fourDim: 90px;
+    --fiveDim: 30px;
+}
+
+
+/* -------------------------------------------
+       Main
+-------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 120vh;
+}
+
+body {
+    color: var(--golden);
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+    background: linear-gradient(to bottom, #d8cfcb, #91919f);
+      height: 100vh;
+      background-image: url(Images/ui/wallpaper2.jpg);
+      background-size : 100% 100%;;
+    }
+
+
+/*
+INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom, font-size handles either equally.
+*/
+
+#title {
+    background: var(--bgIntense);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+#title>p {
+    font-size: 1rem;
+}
+
+#title>pre {
+    font-size: 1rem;
+}
+
+
+/* Primary Container */
+
+#contentWrap {
+    min-height: 100%;
+    margin-top: 15%;
+    flex: 1;
+    display: flex;
+    flex-direction: var(--featureFlexDirection);
+    justify-content: center;
+}
+
+
+/* -------------------------------------------
+       row & positions wrappers
+-------------------------------------------- */
+
+
+/* Wrap keyPositions, provides common left edge */
+
+.keyRow {
+    left: 2.2em;
+    position: relative;
+}
+
+
+/* Wrap an arm and a key */
+
+.keyPosition {
+    left: 4em;
+    margin-right: 4em;
+    position: absolute;
+}
+
+
+/* -------------------------------------------
+       row positions & arm lengths
+-------------------------------------------- */
+
+
+/* Manage the stacking of keys */
+
+.rowLevel_5 {
+    z-index: 5;
+}
+
+.rowLevel_4 {
+    z-index: 4;
+}
+
+.rowLevel_3 {
+    z-index: 3;
+}
+
+.rowLevel_2 {
+    z-index: 2;
+}
+
+.rowLevel_1 {
+    z-index: 1;
+}
+
+
+/* Manage the length of arms */
+
+.armLength_5 {
+    height: var(--fiveDim);
+}
+
+.armLength_4 {
+    height: var(--fourDim);
+}
+
+.armLength_3 {
+    height: var(--threeDim);
+}
+
+.armLength_2 {
+    height: var(--twoDim);
+}
+
+.armLength_1 {
+    height: var(--oneDim);
+}
+
+
+/* Manage the position of keys */
+
+.kiPosition_5 {
+    top: var(--fiveDim);
+}
+
+.kiPosition_4 {
+    top: var(--fourDim);
+}
+
+.kiPosition_3 {
+    top: var(--threeDim);
+}
+
+.kiPosition_2 {
+    top: var(--twoDim);
+}
+
+.kiPosition_1 {
+    top: var(--oneDim);
+}
+
+
+/* arm in normal display */
+
+.arm {
+    background: rgba(224, 196, 52, 1);
+    box-shadow: inset -4px -16px 2px 1px rgba(0, 0, 0, 0.2), 0 4px 0 rgba(255, 255, 255, 0.2), 1px 6px 8px 4px rgba(0, 0, 0, 0.4);
+    width: 8px;
+    border: 2px outset lightsalmon;
+    z-index: -9;
+}
+
+
+/* arm when activated */
+
+.armDown {
+    background: linear-gradient(to bottom, #e0c434 40%, #bba73d);
+    transform: scaleX(0.8);
+}
+
+
+/* -------------------------------------------
+  keys
+-------------------------------------------- */
+
+
+/* generalized key properties */
+
+.ki {
+    background: rgba(0, 0, 0, 0.9);
+    /* glass black */
+    border: 0;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 4px rgba(100, 100, 200, 0.9), inset -4px -2px 6px rgba(255, 255, 255, 0.6), 1px 1px 1px rgba(255, 255, 255, 0.6), -1px -1px 2px rgba(0, 0, 0, 0.4), 1px 6px 8px 4px rgba(0, 0, 0, 0.4);
+    color: rgba(220, 220, 255, 0.9);
+    font-size: 1.6em;
+    font-weight: bold;
+    left: -0.85em;
+    line-height: 2.8em;
+    position: absolute;
+}
+
+
+/* socket for the key */
+
+.ki::before {
+    background: rgba(224, 196, 52, 1);
+    border-radius: 50%;
+    bottom: -4px;
+    box-shadow: inset -2px -2px 2px rgba(50, 50, 50, 0.2), inset 1px 1px 2px rgba(100, 100, 100, 0.2);
+    content: "";
+    display: block;
+    left: -4px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    z-index: -9;
+}
+
+
+/* round key in normal display */
+
+.roundKi {
+    font-size: 1.6em;
+    height: 2em;
+    left: -0.85em;
+    width: 2em;
+}
+
+
+/* round key when activated */
+
+.roundKiDown {
+    font-size: 1.55em;
+    height: 1.9em;
+    left: -0.75em;
+    width: 1.9em;
+}
+
+.currentCalc {
+    background: rgba(160, 203, 209, 0.8);
+    color: rgb(228, 99, 21);
+}
+
+
+/* specialized properties for functional keys */
+
+.funcKi {
+    background: rgba(214, 212, 180, 0.9);
+    color: rgba(228, 99, 21, 0.6);
+}
+
+
+/* ------------------------------------------
+   display
+------------------------------------------- */
+
+#controlWrap {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    position: relative;
+}
+
+#resultsDisplay {
+    width: 100%;
+    padding: 0.6em 0.8em;
+    display: flex;
+    background: black;
+    box-shadow: inset -1px -2px 2px 2px rgba(135, 135, 145, 0.8), inset 1px 2px 2px 3px rgba(155, 155, 165, 0.9), 2px 3px 8px 0 rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    margin-top: 12px;
+    border-radius: 12px;
+    display: none;
+}
+
+#entryPad {
+    width: 380px;
+    min-height: 420px;
+    box-shadow: inset 2px 12px 6px 4px rgba(0, 0, 0, 0.4), 2px 3px 8px 4px rgba(0, 0, 0, 0.4), inset -1px -1px 8px 0 rgba(0, 0, 0, 0.4);
+    padding: 0 20px;
+    border-radius: 5%;
+    border-width: 40px 12px;
+    border-style: solid;
+    border-color: var(--bgIntense);
+}
+
+.digit {
+    width: 44px;
+    height: 82px;
+    position: relative;
+    border: 1px #0e0e0e solid;
+}
+
+.strip {
+    width: 24px;
+    position: absolute;
+    left: 6px;
+}
+
+.bulb {
+    border-radius: 36%;
+    box-shadow: inset 0 0 8px 2px rgba(20, 20, 20, 0.5), inset 0 1px 0 8px rgba(36, 30, 30, 0.3);
+    color: rgba(125, 125, 125, 0.3);
+    font-size: 4px;
+    padding: 2px;
+}
+
+.lit {
+    color: rgb(228, 99, 21);
+    box-shadow: inset 0 0 8px 2px #f5c87b, inset 0 1px 0 8px #f76941;
+}
+
+.vertical {
+    transform: rotate(90deg);
+    transform-origin: right;
+    margin-top: 16px;
+    left: 12px;
+}
+
+.top {
+    top: 0;
+}
+
+.mid {
+    top: 36px;
+}
+
+.above {
+    top: 14px;
+}
+
+.below {
+    top: 52px;
+}
+
+.bottom {
+    top: 72px;
+}
+
+.left {
+    left: 4px;
+    transform-origin: left;
+    transform: rotate(-90deg);
+}
+
+
+/* ------------------------------------------
+    shaft and decimal elements and animation
+------------------------------------------- */
+
+#shaftWrap {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    height: 40px;
+    padding: 0.6em 0.8em;
+    width: var(--contentWidth);
+    border-width: 0 12px;
+    border-style: solid;
+    border-color: var(--golden);
+    box-shadow: 2px 0 6px 2px rgba(0, 0, 0, 0.4), inset 2px 2px 6px 2px rgba(0, 0, 0, 0.4);
+}
+
+.shaftWrapLit {
+    background: linear-gradient(to bottom, var(--shaftWrapLit) 50%, rgba(0, 0, 0, 0.4));
+}
+
+#shaftWrap::before,
+#shaftWrap::after {
+    top: 0;
+    content: "";
+    display: block;
+    background: rgba(224, 196, 52, 1);
+    height: 24px;
+    width: 14px;
+    z-index: 2;
+    position: absolute;
+}
+
+#shaftWrap::before {
+    left: calc(var(--limitSpacer) - var(--limitWidth));
+    box-shadow: inset -2px -1px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 0 rgba(255, 255, 255, 0.2), 1px 1px 8px 2px rgba(0, 0, 0, 0.4), inset 2px 4px 4px 2px rgba(255, 170, 90, 0.6);
+}
+
+#shaftWrap::after {
+    left: calc(var(--shaftWidth) + var(--limitWidth));
+    content: "";
+    box-shadow: inset -2px -1px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 0 rgba(255, 255, 255, 0.2), 1px 1px 8px 2px rgba(0, 0, 0, 0.4), inset 2px 4px 4px 2px rgba(255, 170, 90, 0.6);
+}
+
+.crankshaft {
+    height: var(--shaftHeight);
+    width: var(--shaftWidth);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    margin-top: 0.2em;
+}
+
+#shaft {
+    box-shadow: inset 0 -2px 2px rgba(180, 160, 60, 1), inset 0 2px 19px 0 rgba(241, 171, 129, 0.8), 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 60%;
+    align-self: center;
+    display: block;
+    z-index: 1;
+    position: absolute;
+    background: rgb(216, 201, 34);
+    transform: skewX(0deg);
+}
+
+.spinnerSection {
+    width: var(--spinnerWidth);
+    display: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.spinnerSection>div {
+    position: absolute;
+    height: 100%;
+}
+
+.limit {
+    width: var(--limitWidth);
+    background: rgb(216, 201, 34);
+    z-index: 10;
+}
+
+.leftLimit {
+    left: var(--limitSpacer);
+    box-shadow: inset 1px -2px 2px 0 rgba(173, 147, 112, 0.8), inset 0 2px 19px 0 rgba(241, 171, 129, 0.8), 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rightLimit {
+    left: calc(var(--shaftWidth) - var(--limitSpacer) - var(--limitWidth) - 2px);
+    box-shadow: inset -1px -2px 2px 0 rgba(173, 147, 112, 0.8), inset 0 2px 19px 0 rgba(241, 171, 129, 0.8), 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+#decimalGear {
+    position: absolute;
+    top: calc(var(--gearDim) / 2 - var(--gearDim));
+    left: calc(var(--shaftWidth) - var(--gearDim) / 2 - var(--limitWidth) - var(--shuttleDim));
+    z-index: 12;
+    transform-origin: center calc(var(--gearDim) - var(--shuttleDim) / 2);
+    transform: rotate(-90deg);
+    width: var(--gearDim);
+    height: var(--gearDim);
+    transition: left 500ms 700ms, transform 500ms ease-in-out 800ms;
+}
+
+#decimalDot {
+    position: absolute;
+    box-shadow: inset -1px -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 8px 1px rgba(0, 0, 0, 0.4);
+    left: calc(50% - var(--dotDim) / 2);
+    height: var(--dotDim);
+    width: var(--dotDim);
+    border-radius: 50%;
+    z-index: 9;
+}
+
+.decimalLit {
+    background: var(--decimalLit);
+}
+
+.decimalDim {
+    background: var(--decimalDim);
+}
+
+#decimalDot::before {
+    position: absolute;
+    content: "";
+    display: block;
+    border-radius: 50%;
+    background: rgba(224, 196, 52, 0.3);
+    box-shadow: inset -2px -1px 0 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.4), inset 0 0 4px 2px rgba(255, 170, 90, 0.6);
+    height: calc(var(--dotDim) + 2px);
+    width: calc(var(--dotDim) + 2px);
+    bottom: -1px;
+    left: -1px;
+    z-index: 2;
+}
+
+#decimalRiser {
+    height: 100%;
+    width: var(--riserWidth);
+    position: absolute;
+    z-index: 0;
+    border-radius: 3px;
+    background: rgba(199, 173, 44, 0.8);
+    box-shadow: inset -4px -16px 2px 1px rgba(0, 0, 0, 0.2), 0 4px 0 rgba(255, 255, 255, 0.2), 1px 6px 8px 1px rgba(0, 0, 0, 0.4);
+    left: calc(50% - var(--riserWidth) / 2);
+    border: 2px outset #d4967d;
+}
+
+#decimalShuttle {
+    width: var(--shuttleDim);
+    height: var(--shuttleDim);
+    border-radius: 30% 20%;
+    position: absolute;
+    left: calc(50% - var(--shuttleDim) / 2);
+    bottom: 0;
+    transform: rotate(45deg);
+    background: rgb(222, 184, 81);
+    box-shadow: inset -4px -16px 2px 1px rgba(0, 0, 0, 0.2), 0 2px 8px 1px rgba(0, 0, 0, 0.4);
+    border: 2px outset #d4967d;
+}
+
+.spinnerSection>div>span.behind {
+    transform: skewX(var(--behindSkew));
+    width: var(--behindWidth);
+    margin-left: var(--behindLeftMargin);
+    z-index: 0;
+}
+
+.spinnerSection>div>span.tooth {
+    transform: skewX(var(--toothSkew));
+    width: var(--toothWidth);
+    margin-left: var(--toothLeftMargin);
+    z-index: 3;
+}
+
+.spinnerSection>div>span {
+    background: rgb(216, 201, 34);
+    box-shadow: inset 0 -2px 2px rgba(173, 147, 112, 0.8), inset 0 2px 19px 0 rgba(241, 171, 129, 0.8);
+    height: 100%;
+    position: absolute;
+}
+
+.spinnerSection::after {
+    clear: both;
+}
+
+.anim {
+    animation: move 200ms ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 4px;
+    }
+    100% {
+        left: 6px;
+    }
+}
