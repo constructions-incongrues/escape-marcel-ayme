@@ -55,7 +55,7 @@
     padding: 0;
 }
 
-.bones {width: 50%;height: 50%;}
+.bones {width: 70%;height: 70%;right: -86px;bottom:0px; position: fixed;}
 html {
     height: 120vh;
 }
