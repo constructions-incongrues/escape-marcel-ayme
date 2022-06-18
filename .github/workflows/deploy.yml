@@ -14,14 +14,8 @@ jobs:
         with:
           branch: main
           folder: .
-
-  notification:
-    name: Rocket.Chat Notifications
-    runs-on: ubuntu-latest
-    steps:
-      - uses: RocketChat/Rocket.Chat.GitHub.Action.Notification@1.1.1
-      - name: with mention on failure only
-        uses: ./
+      - name: Notify
+        uses: RocketChat/Rocket.Chat.GitHub.Action.Notification@1.1.1
         with:
           type: ${{ job.status }}
           job_name: ':robot_face: *Success no mention*'
