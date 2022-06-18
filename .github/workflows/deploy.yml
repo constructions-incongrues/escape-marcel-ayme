@@ -18,7 +18,7 @@ jobs:
         uses: RocketChat/Rocket.Chat.GitHub.Action.Notification@1.1.1
         with:
           type: ${{ job.status }}
-          job_name: ':robot_face: *Success no mention*'
+          job_name: ':robot_face: *COUCOU*'
           mention: 'here'
           mention_if: 'failure'
           commit: true
