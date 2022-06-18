@@ -261,6 +261,7 @@ function handleKeyDown() {
             document.querySelectorAll('.roundKiDown').forEach(function(e) {
                 e.classList.remove("roundKiDown");
                 e.previousElementSibling.classList.remove("armDown");
+                document.getElementById('bones').style.display = 'block';
             })
         }, 500);
     }

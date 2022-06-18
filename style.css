@@ -55,9 +55,15 @@
     padding: 0;
 }
 
-.bones {width: 70%;height: 70%;    top: 69px;
+#bones {
+    width: 70%;
+    height: 70%;
+    top: 69px;
     position: fixed;
-    opacity: 1;z-index: 1000:;}
+    z-index: 1000;
+    display: none;
+}
+
 html {
     height: 120vh;
 }
