@@ -7,7 +7,7 @@ Le jeu est disponible à l'adresse https://constructions-incongrues.github.io/es
 À la racine du projet, exécuter la commande suivante : 
 
 ```
-docker-compose up
+make dev
 ```
 
 Cela rend accessibles les pages suivantes :
@@ -16,3 +16,10 @@ Cela rend accessibles les pages suivantes :
 - Puzzle : http://localhost:8080/escape-marcel-ayme/puzzle.html 
 - Solution : http://localhost:8080/escape-marcel-ayme/solution.html 
 
+## Mise à jour du Raspberry Pi
+
+À la racine du projet, exécuter la commande suivante : 
+
+```
+make pi
+```
