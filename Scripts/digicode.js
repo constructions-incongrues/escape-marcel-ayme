@@ -303,6 +303,9 @@ function initializeDisplay() {
         
         // play video
         document.querySelector('#poster video').play();
+
+        // hide prison
+        document.querySelector('#prison').classList.add('hide');
     })
 
     // pause video on poster mouseout

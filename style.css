@@ -464,13 +464,18 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     opacity: 0;
 }
 
+#prison {
+    position: fixed;
+    top: 0;
+    right: 50px;
+    cursor: url("Images/ui/main_ouverte.png"), auto;
+}
 #typewriter {
     position: fixed;
     top: -40px;
     right: -53px;
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
-
 
 #typewriter img {
     height: 52%;
