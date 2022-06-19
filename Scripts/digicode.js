@@ -275,6 +275,7 @@ function initializeDisplay() {
     })
     // Display entryPad on click of machine
     document.querySelector('#typewriter').addEventListener('click', function(event) {
+        document.querySelector('#poster').classList.add('hide');
         document.querySelector('#entryPad').style.display = 'block';
         document.querySelector('#entryPad').style.top = '0';
         // hide machine
@@ -296,6 +297,7 @@ function initializeDisplay() {
         // toggle video source alternate between video.mp4 and video2.mp4
         if (document.querySelector('#poster video').getAttribute('src') === 'Videos/video.mp4') {
             document.querySelector('#poster video').setAttribute('src', 'Videos/video2.mp4');
+            document.querySelector('#prison').classList.add('hide');
         }
         else {
             document.querySelector('#poster video').setAttribute('src', 'Videos/video.mp4');
@@ -305,7 +307,6 @@ function initializeDisplay() {
         document.querySelector('#poster video').play();
 
         // hide prison
-        document.querySelector('#prison').classList.add('hide');
     })
 
     // pause video on poster mouseout
@@ -347,6 +348,7 @@ function handleKeyDown() {
                 e.classList.remove("roundKiDown");
                 e.previousElementSibling.classList.remove("armDown");
                 document.getElementById('bones').style.display = 'block';
+                document.querySelector('#poster').classList.add('hide');
             })
             initializeKeys();
         }, 500);
