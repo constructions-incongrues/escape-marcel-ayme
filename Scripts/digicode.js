@@ -240,17 +240,16 @@ function initializeDisplay() {
     // Note
     document.querySelector('#note').addEventListener('click', 
         function handleNote (event) {
-            setTimeout(() => {
-                document.querySelector('#note img.fire').classList.remove('hide');
-            }, 500);
+            document.querySelector('#note img.fire').classList.remove('hide');
+            document.querySelector('#note img.paper').classList.add('hot');
             setTimeout(() => {
                 document.querySelector('#note img.paper').classList.add('hide');
                 setTimeout(() => {
                     document.querySelector('#text-note').classList.remove('hide');
                     setTimeout(() => {
-                        // document.querySelector('#note img.fire').remove();
-                        // document.querySelector('#note img.paper').remove();
-                        document.querySelector('#note').style.cursor = 'pointer';
+                        document.querySelector('#note img.fire').remove();
+                        document.querySelector('#note img.paper').remove();
+                        // document.querySelector('#note').style.cursor = 'pointer';
                     }, 1000);
                 }, 1000);
             }, 2000);

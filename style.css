@@ -4,6 +4,7 @@
     top: 51px;
     right: 649px;
     transform: rotate(6deg);
+    cursor: url("Images/ui/zap.png"), auto;  
 }
 
 #hideMe {
@@ -769,6 +770,7 @@ transform: rotate(-3deg);
     transform: rotate(-12deg);
     color:black;
     z-index:200;
+    cursor: url("Images/ui/cursorflammegris.png"), auto;    
     
 }
 
