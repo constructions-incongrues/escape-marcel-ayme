@@ -250,7 +250,7 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
-    document.querySelector('#note img.paper').addEventListener('click', function(event) {
+    document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
         document.querySelector('img.paper').style.display = 'none'
         document.querySelector('img.fire').style.display = 'block'
         setTimeout(() => {
