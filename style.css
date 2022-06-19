@@ -665,8 +665,17 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     bottom: 30px;
     left: 40px;
     transform: rotate(-22deg);
-    cursor: url("https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png"), auto;      
+    cursor: url("Images/ui/cursorstatic.png"), auto;      
 }
+
+.firefire {
+position: fixed;
+bottom: 30px;
+left: 40px;
+transform: rotate(-22deg);
+cursor: url("Images/ui/cursorstatic.png"), auto;      
+}
+
 
 #note p {
     width: 165px;

@@ -255,6 +255,9 @@ function initializeDisplay() {
         event.target.style.width = '150%'
         event.target.style.height = '100%'
         event.target.src = 'Images/ui/fire-77.gif'
+        event.target.classList.add('firefire')
+        event.target.classList.add('ffade-in')
+
         setTimeout(() => {
             document.getElementById('note').style.display = 'none';
         }, 2000);
