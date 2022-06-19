@@ -660,15 +660,14 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
         left: 6px;
     }
 }
-
-.note {
+#note {
     position: fixed;
     bottom: 30px;
     left: 40px;
     transform: rotate(-22deg);
 }
 
-.note p {
+#note p {
     width: 165px;
     height: 100px;
     bottom: 120px;
