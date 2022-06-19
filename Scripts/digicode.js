@@ -234,14 +234,6 @@ function runDisplayDiagnostic() {
     }, 500);
 }
 
-function note() {
-    document.querySelector('#note').classList.add('hover');
-    setTimeout(() => {
-        handleNote();
-    }, 1000);
-}
-
-
 function initializeDisplay() {
     runDisplayDiagnostic();
 
