@@ -250,14 +250,9 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
-    document.querySelector('#note img').addEventListener('click', function(event) {
-        console.log(event.target);
-        event.target.style.width = '150%'
-        event.target.style.height = '100%'
-        event.target.src = 'Images/ui/fire-77.gif'
-        event.target.classList.add('firefire')
-        event.target.classList.add('ffade-in')
-
+    document.querySelector('#note img.paper').addEventListener('click', function(event) {
+        document.querySelector('img.paper').style.display = 'none'
+        document.querySelector('img.fire').style.display = 'block'
         setTimeout(() => {
             document.getElementById('note').style.display = 'none';
         }, 2000);
