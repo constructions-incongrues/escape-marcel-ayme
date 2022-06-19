@@ -248,7 +248,7 @@ function initializeDisplay() {
                 setTimeout(() => {
                     document.querySelector('#text-note').classList.remove('hide');
                     setTimeout(() => {
-                        document.querySelector('#note img.fire').remove();
+                        // document.querySelector('#note img.fire').remove();
                         document.querySelector('#note img.paper').remove();
                         document.querySelector('#note').style.cursor = 'pointer';
                     }, 1000);
