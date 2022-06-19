@@ -8,8 +8,9 @@
   <meta name="coder" content="MonzyBush">
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="loading">
 
+<div id="loader"></div>
 
 <!-- partial:index.partial.html -->
 <!-- <div id="title">PunkCalc
@@ -366,7 +367,8 @@
     <div id="bones" class="fade-in"><img src="Images/ui/skeleton2.png"   /></div>
     
     <div id="note">
-      <img src="Images/note.png" style="width: 50%; height:50%;" />
+      <img src="Images/note.png" class="paper" style="width: 50%; height:50%;" />
+      <img src="Images/ui/fire-77.gif" class="fire" style="display: none;" />
       <!-- <p>“Les idées fausses ne sont pas toutes mauvaises.” <br /> Marcel Aymé</p> -->
     </div>
     
@@ -384,6 +386,11 @@
       loop: true,
     });
     sound.play();
+  </script>
+  <script>
+    setTimeout(function() {
+      document.querySelector('body').classList.remove('loading');
+    }, 1000);
   </script>
 </body>
 </html>

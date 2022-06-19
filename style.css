@@ -689,3 +689,20 @@ cursor: url("Images/ui/cursorstatic.png"), auto;
     transform: rotate(-12deg);
     color:#000;
 }
+
+body.loading * {
+    display: none;
+}
+
+body.loading #loader {
+    display: block;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: #000;
+}
