@@ -722,6 +722,7 @@ z-index: 5000;
     transform: rotate(-12deg);
     color:#000;
     z-index:200;
+    
 }
 
 body.loading * {
