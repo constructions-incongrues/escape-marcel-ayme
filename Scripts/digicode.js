@@ -254,8 +254,10 @@ function initializeDisplay() {
         document.querySelector('img.paper').style.display = 'none'
         document.querySelector('img.fire').style.display = 'block'
         setTimeout(() => {
-            document.getElementById('note').style.display = 'block';
+            document.getElementById('note').style.display = 'none';
         }, 2000);
+        document.getElementById('text-note').style.display = 'none';
+
     })
 }
 
