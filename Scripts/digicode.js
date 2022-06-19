@@ -236,6 +236,7 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
+    // Papier
     document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
         document.querySelector('img.paper').style.display = 'none'
         document.querySelector('img.fire').style.display = 'block'
@@ -244,8 +245,24 @@ function initializeDisplay() {
             document.getElementById('note').style.display = 'none';
         }, 2000);
         document.getElementById('text-note').style.display = 'none';
-
     })
+
+    // Machine
+    document.querySelector('#typewriter').addEventListener('mouseover', function(event) {
+        document.querySelector('#typewriter img').classList.add('hover');
+    })
+    // remove hover class on mouseout  of machine
+    document.querySelector('#typewriter').addEventListener('mouseout', function(event) {
+        document.querySelector('#typewriter img').classList.remove('hover');
+    })
+    // Display entryPad on click of machine
+    document.querySelector('#typewriter').addEventListener('click', function(event) {
+        document.querySelector('#entryPad').style.display = 'block';
+        document.querySelector('#entryPad').style.top = '0';
+        // hide machine
+        document.querySelector('#typewriter').style.display = 'none';
+    })
+
 }
 
 /* ====================================
@@ -263,15 +280,15 @@ function initializeDisplay() {
 
 function handleKeyDown() {
     // animation =====================
-    document.getElementById('input').value += this.innerText;
+    document.getElementById('padOutput').value += this.innerText;
 
     // pressdown on key and arm
     this.classList.add("roundKiDown");
     this.previousElementSibling.classList.add("armDown");
 
     // ===================== animation
-    if ('femur'.startsWith(document.getElementById('input').value) == false) {
-        document.getElementById('input').value = '';
+    if ('femur'.startsWith(document.getElementById('padOutput').value) == false) {
+        document.getElementById('padOutput').value = '';
         setTimeout(() => {
             document.querySelectorAll('.roundKiDown').forEach(function(e) {
                 e.classList.remove("roundKiDown");
