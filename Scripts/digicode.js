@@ -241,34 +241,37 @@ function note() {
     }, 1000);
 }
 
-function handleNote (event) {
-    setTimeout(() => {
-        document.querySelector('#note img.fire').classList.remove('hide');
-    }, 500);
-    setTimeout(() => {
-        document.querySelector('#note img.paper').classList.add('hide');
-        setTimeout(() => {
-            document.querySelector('#text-note').classList.remove('hide');
-            setTimeout(() => {
-                // delete img.fire node
-                document.querySelector('#note img.fire').remove();
-                document.querySelector('#note').style.cursor = 'pointer';
-            }, 1000);
-        }, 1000);
-    }, 2000);
-}
 
 function initializeDisplay() {
     runDisplayDiagnostic();
 
     // Note
-    document.querySelector('#note').addEventListener('mouseover', note)
+    document.querySelector('#note').addEventListener('click', 
+        function handleNote (event) {
+            setTimeout(() => {
+                document.querySelector('#note img.fire').classList.remove('hide');
+            }, 500);
+            setTimeout(() => {
+                document.querySelector('#note img.paper').classList.add('hide');
+                setTimeout(() => {
+                    document.querySelector('#text-note').classList.remove('hide');
+                    setTimeout(() => {
+                        document.querySelector('#note img.fire').remove();
+                        document.querySelector('#note img.paper').remove();
+                        document.querySelector('#note').style.cursor = 'pointer';
+                    }, 1000);
+                }, 1000);
+            }, 2000);
+    })
     
+    // Note - mouseover add class hover
+    document.querySelector('#note').addEventListener('mouseover', function(event) {
+        document.querySelector('#note').classList.add('hover');
+    })
+
     // Note - mouseout remove hover class
     document.querySelector('#note').addEventListener('mouseout', function(event) {
         document.querySelector('#note').classList.remove('hover');
-        
-
     })
 
     // document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
