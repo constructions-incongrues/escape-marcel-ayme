@@ -1,7 +1,16 @@
 .vids {
     float: left;
 }
-  
+.vids img {
+
+    opacity: 0.7;
+    height: 50%;
+    width: 50%;
+    float:left;
+}
+
+video {   display: block;
+    margin: 0 auto;}
   /* -----------------------------------
 
     Variables
