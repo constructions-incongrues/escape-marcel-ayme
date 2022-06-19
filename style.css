@@ -396,10 +396,16 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     border-color: transparent;
 }
 
-#typewriter {position: fixed;
+#typewriter {
+    position: fixed;
     top: -40px;
-    right: 0px;}
+    right: -53px;
+}
 
+#typewriter img {
+    height: 52%;
+    width: 85%;
+}
 .digit {
     width: 44px;
     height: 82px;
@@ -676,8 +682,8 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 .fire {
 position: fixed;
-bottom: 30px;
-left: 40px;
+bottom: -100px;
+left: 123px;
 cursor: url("Images/ui/cursorstatic.png"), auto;      
 }
 
