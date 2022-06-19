@@ -676,15 +676,19 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     left: 40px;
     transform: rotate(-22deg);
     cursor: url("Images/ui/cursorstatic.png"), auto;      
-    opacity:0.3
+    opacity:0.3; 
+    z-index: 5000;
 }
-#note:hover {opacity: 1;}
+
+.text-note {z-index: 2000;}
 
 .fire {
 position: fixed;
 bottom: -100px;
 left: 123px;
-cursor: url("Images/ui/cursorstatic.png"), auto;      
+cursor: url("Images/ui/cursorstatic.png"), auto;  
+z-index: 5000;
+
 }
 
 
