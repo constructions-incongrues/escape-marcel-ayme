@@ -19,27 +19,14 @@
 </div> -->
 
 
-<!-- #contentWrap -->
-<input type="text" id="input" pattern="femur" style="display: none;">
+<input type="text" id="padOutput" style="display: none;">
 
-<div id="vids">
-<img src="Images/ui/camera.png" class="camera">
-  <video  controls  width="50%" height="50%" autoplay>
-    <source src="Sounds/video2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
+<div id="typewriter">
+  <img src="Images/ui/typewriter.png">
 </div>
-<div id="typewriter"><img src="Images/ui/typewriter.png"></div>
+
 <div id="contentWrap" class="cursorfire">
-    <!-- <audio controls="loop autoplay">
-        <source src="Sounds/labo.mp3" type="audio/mp3">
-        Votre navigateur ne prend pas en charge l'élément <code>audio</code>.
-      </audio>    -->
-    <!-- #controlWrap -->
     <div id="controlWrap">
-      <!-- #resultsDisplay -->
-      <!-- TODO: Build the display programmatically -->
-      <!-- NOTE: .right class is not defined in style sheet, its there for querySelector -->
       <div id="resultsDisplay">
         <!-- .digit -->
         <div class="digit" id="tenMillions">
@@ -280,7 +267,7 @@
       <!-- /#shaftWrap -->
   
       <!-- #entryPad -->
-      <div id="entryPad">
+      <div id="entryPad" style="display: none;">
         <!-- TODO: Build the entry keypad programmatically -->
         <!--    Top Row: level 5 -->
         <div class="keyRow">

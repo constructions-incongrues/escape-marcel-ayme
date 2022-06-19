@@ -250,14 +250,24 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
+
     document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
         document.querySelector('img.paper').style.display = 'none'
         document.querySelector('img.fire').style.display = 'block'
         setTimeout(() => {
             document.getElementById('note').style.display = 'none';
         }, 2000);
-        document.getElementById('text-note').style.display = 'none';
 
+    })
+    document.querySelector('#typewriter').addEventListener('mouseover', function(event) {
+        event.target.classList.add('hover')
+    })
+    document.querySelector('#typewriter').addEventListener('mouseout', function(event) {
+        event.target.classList.remove('hover')
+    })
+    document.querySelector('#typewriter').addEventListener('click', function() {
+        document.querySelector('#entryPad').style.display = 'block';
+        document.querySelector('#typewriter').style.display = 'none';
     })
 }
 
@@ -276,15 +286,15 @@ function initializeDisplay() {
 
 function handleKeyDown() {
     // animation =====================
-    document.getElementById('input').value += this.innerText;
+    document.querySelector('#padOutput').value += this.innerText;
 
     // pressdown on key and arm
     this.classList.add("roundKiDown");
     this.previousElementSibling.classList.add("armDown");
 
     // ===================== animation
-    if ('femur'.startsWith(document.getElementById('input').value) == false) {
-        document.getElementById('input').value = '';
+    if ('femur'.startsWith(document.getElementById('padOutput').value) == false) {
+        document.getElementById('padOutput').value = '';
         setTimeout(() => {
             document.querySelectorAll('.roundKiDown').forEach(function(e) {
                 e.classList.remove("roundKiDown");
@@ -294,7 +304,7 @@ function handleKeyDown() {
             initializeKeys();
         }, 500);
     }
-    if (document.getElementById('input').value == 'femur') {
+    if (document.getElementById('padOutput').value == 'femur') {
         document.location = 'puzzle.html';
     }
 }

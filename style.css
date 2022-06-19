@@ -414,11 +414,19 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     right: -53px;
 }
 
+
 #typewriter img {
     height: 52%;
     width: 60%;
     opacity:0.6;
 }
+
+#typewriter img.hover {
+    height: 52%;
+    width: 85%;
+    opacity:1;
+}
+
 .digit {
     width: 44px;
     height: 82px;
