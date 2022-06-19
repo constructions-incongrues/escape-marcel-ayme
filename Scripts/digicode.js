@@ -234,19 +234,42 @@ function runDisplayDiagnostic() {
     }, 500);
 }
 
+function handleNote (event) {
+    setTimeout(() => {
+        document.querySelector('#note img.fire').classList.remove('hide');
+    }, 500);
+    setTimeout(() => {
+        document.querySelector('#note img.paper').classList.add('hide');
+        setTimeout(() => {
+            document.querySelector('#text-note').classList.remove('hide');
+        }, 1000);
+    }, 2000);
+}
+
 function initializeDisplay() {
     runDisplayDiagnostic();
 
-    // Papier
-    document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
-        document.querySelector('img.paper').style.display = 'none'
-        document.querySelector('img.fire').style.display = 'block'
-        document.querySelector('#text-note').style.color = 'black'
+    // Note
+    document.querySelector('#note').addEventListener('mouseover', handleNote)
+    
+    // Note - mouseout remove hover class
+    document.querySelector('#note').addEventListener('mouseout', function(event) {
+        document.querySelector('#note').classList.remove('hover');
+        document.querySelector('img.fire').classList.add('hide');
         setTimeout(() => {
-            document.getElementById('note').style.display = 'none';
-        }, 2000);
-        document.getElementById('text-note').style.display = 'none';
+            document.querySelector('#note').removeEventListener('mouseover', handleNote)
+        }, 1000);
     })
+
+    // document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
+    //     document.querySelector('img.paper').style.display = 'none'
+    //     document.querySelector('img.fire').style.display = 'block'
+    //     document.querySelector('#text-note').style.color = 'black'
+    //     setTimeout(() => {
+    //         document.getElementById('note').style.display = 'none';
+    //     }, 2000);
+    //     document.getElementById('text-note').style.display = 'none';
+    // })
 
     // Machine
     document.querySelector('#typewriter').addEventListener('mouseover', function(event) {
@@ -268,7 +291,7 @@ function initializeDisplay() {
     document.querySelector('#camera').addEventListener('mouseover', function(event) {
         document.querySelector('#camera img').classList.add('hover');
     })
-     
+
     // remove hover class on mouseout  of camera
     document.querySelector('#camera').addEventListener('mouseout', function(event) {
         document.querySelector('#camera img').classList.remove('hover');
