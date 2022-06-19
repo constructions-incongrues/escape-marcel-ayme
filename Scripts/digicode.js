@@ -249,7 +249,7 @@ function initializeDisplay() {
                     document.querySelector('#text-note').classList.remove('hide');
                     setTimeout(() => {
                         // document.querySelector('#note img.fire').remove();
-                        document.querySelector('#note img.paper').remove();
+                        // document.querySelector('#note img.paper').remove();
                         document.querySelector('#note').style.cursor = 'pointer';
                     }, 1000);
                 }, 1000);
@@ -292,15 +292,22 @@ function initializeDisplay() {
         document.querySelector('#typewriter').style.display = 'none';
     })
 
-    // // Camera
-    // document.querySelector('#camera').addEventListener('mouseover', function(event) {
-    //     document.querySelector('#camera img').classList.add('hover');
-    // })
+    // Camera
+    document.querySelector('#camera').addEventListener('mouseover', function(event) {
+        document.querySelector('#camera img').classList.add('hover');
+    })
 
-    // // remove hover class on mouseout  of camera
-    // document.querySelector('#camera').addEventListener('mouseout', function(event) {
-    //     document.querySelector('#camera img').classList.remove('hover');
-    // })
+    // remove hover class on mouseout  of camera
+    document.querySelector('#camera').addEventListener('mouseout', function(event) {
+        document.querySelector('#camera img').classList.remove('hover');
+    })
+
+    // camera click
+    document.querySelector('#camera').addEventListener('click', function(event) {
+        // show affiche
+        console.log(document.querySelector('#affiche'))
+        document.querySelector('#affiche').classList.remove('hide');
+    })
 }
 
 /* ====================================
