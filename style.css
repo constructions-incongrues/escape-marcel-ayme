@@ -444,6 +444,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     opacity: 1;
 }
 
+#note img {height: 50%;width: 50%;}
 #note img.hide {
     opacity: 0;
 }
