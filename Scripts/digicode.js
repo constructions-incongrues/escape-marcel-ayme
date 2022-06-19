@@ -156,28 +156,14 @@ const placeMatchArray = [
     Initialization - Input - Keys
 
 ==================================== */
-const characters ='ABCDGHIJKLNOPQSTVWXYZabcdghijklnopqstvwxyz0123456789⛮⛭☠';
-
-function generateString(length) {
-    let result = 'femur';
-    const charactersLength = characters.length;
-    for ( let i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-
-    return result;
-}
 
 function initializeKeys() {
     // initialize event listeners on keys only
     keys.forEach(key => key.addEventListener('click', handleKeyDown));
-    var charList = generateString(18).split('');
-    keys.forEach(function(key) {
-        char = charList[Math.floor(Math.random() * charList.length)];
+    var charList = 'efghijklmnopqrstuv'.split('').sort( () => .5 - Math.random() );
+    keys.forEach(function(key, index) {
+        char = charList[index];
         key.innerText = char;
-        charList = charList.filter(function(value) {
-            return value != char;
-        });
     });
 
     // initialize positions by row, adjusting 
@@ -295,8 +281,13 @@ function handleKeyDown() {
             initializeKeys();
         }, 500);
     }
-    if (document.getElementById('input').value == 'femur') {
-        document.location = 'puzzle.html';
+    if (document.getElementById('padOutput').value == 'femur') {
+        setTimeout(() => {
+            document.querySelector('#entryPad').style.display = 'none';
+            setTimeout(() => {
+                document.location = 'puzzle.html';
+            }, 2000);    
+        }, 1000);
     }
 }
 
