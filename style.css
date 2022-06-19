@@ -665,6 +665,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     bottom: 30px;
     left: 40px;
     transform: rotate(-22deg);
+    cursor: url("https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png"), auto;      
 }
 
 #note p {
@@ -677,5 +678,3 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     transform: rotate(-12deg);
     color:#000;
 }
-
-.cursorfire { cursor: url(Images/ui/cursor.gif), auto;}
