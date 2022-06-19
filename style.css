@@ -396,6 +396,10 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     border-color: transparent;
 }
 
+#typewriter {position: fixed;
+    top: -40px;
+    right: 0px;}
+
 .digit {
     width: 44px;
     height: 82px;
