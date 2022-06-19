@@ -283,25 +283,35 @@ function initializeDisplay() {
     })
 
     // Camera
-    document.querySelector('#camera').addEventListener('mouseover', function(event) {
-        document.querySelector('#camera img').classList.add('hover');
-    })
-
-    // remove hover class on mouseout  of camera
-    document.querySelector('#camera').addEventListener('mouseout', function(event) {
-        document.querySelector('#camera img').classList.remove('hover');
-    })
-
     // camera click
     document.querySelector('#camera').addEventListener('click', function(event) {
         // show poster
-        document.querySelector('#poster').classList.remove('hide');
+        document.querySelector('#camera').classList.toggle('hover');
+        document.querySelector('#poster').classList.toggle('hide');
+        document.querySelector('#poster video').load();
     })
 
-    // poster click
+    // click on poster to change video source to video2.mp4
     document.querySelector('#poster').addEventListener('click', function(event) {
-        // show vids
-        document.querySelector('#vids').classList.remove('hide');
+        // toggle video source alternate between video.mp4 and video2.mp4
+        if (document.querySelector('#poster video').getAttribute('src') === 'Videos/video.mp4') {
+            document.querySelector('#poster video').setAttribute('src', 'Videos/video2.mp4');
+        }
+        else {
+            document.querySelector('#poster video').setAttribute('src', 'Videos/video.mp4');
+        }
+        
+        // play video
+        document.querySelector('#poster video').play();
+    })
+
+    // pause video on poster mouseout
+    document.querySelector('#poster').addEventListener('mouseover', function(event) {
+        document.querySelector('#poster video').play();
+    })
+    document.querySelector('#poster').addEventListener('mouseout', function(event) {
+        document.querySelector('#poster video').pause();
+        document.querySelector('#poster video').load();
     })
 }
 

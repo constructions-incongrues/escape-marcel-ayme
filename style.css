@@ -1,5 +1,10 @@
 
-#poster {height: 400px;width: 400px;}
+#poster {
+    position: fixed;
+    top: 51px;
+    right: 649px;
+    transform: rotate(6deg);
+}
 
 #hideMe {
     -moz-animation: cssAnimation 0s ease-in 5s forwards;
@@ -39,7 +44,7 @@
     transform: rotate(-3deg);
 }
 
-#camera:hover {
+#camera.hover {
     opacity: 1;
 }
 
@@ -784,3 +789,5 @@ body.loading #loader {
     top: 0;
     background-color: #000;
 }
+
+
