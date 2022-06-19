@@ -257,7 +257,7 @@ function initializeDisplay() {
         event.target.src = 'Images/ui/fire-77.gif'
         setTimeout(() => {
             document.getElementById('note').style.display = 'none';
-        }, Z000);
+        }, 2000);
     })
 }
 
