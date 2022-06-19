@@ -1,3 +1,6 @@
+
+#poster {height: 400px;width: 400px;}
+
 #hideMe {
     -moz-animation: cssAnimation 0s ease-in 5s forwards;
     /* Firefox */
