@@ -680,7 +680,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     z-index: 5000;
 }
 
-.text-note {z-index: 2000;}
+#text-note {z-index: 2000;}
 
 .fire {
 position: fixed;
