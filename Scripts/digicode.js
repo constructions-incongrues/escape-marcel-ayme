@@ -236,6 +236,7 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
+
     // Papier
     document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
         document.querySelector('img.paper').style.display = 'none'
@@ -263,6 +264,15 @@ function initializeDisplay() {
         document.querySelector('#typewriter').style.display = 'none';
     })
 
+    // Camera
+    document.querySelector('#camera').addEventListener('mouseover', function(event) {
+        document.querySelector('#camera img').classList.add('hover');
+    })
+     
+    // remove hover class on mouseout  of camera
+    document.querySelector('#camera').addEventListener('mouseout', function(event) {
+        document.querySelector('#camera img').classList.remove('hover');
+    })
 }
 
 /* ====================================
