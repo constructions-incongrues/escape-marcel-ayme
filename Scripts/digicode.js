@@ -251,7 +251,7 @@ function initializeDisplay() {
                         document.querySelector('#note img.paper').remove();
                         // document.querySelector('#note').style.cursor = 'pointer';
                     }, 1000);
-                }, 1000);
+                }, 0);
             }, 2000);
     })
     
