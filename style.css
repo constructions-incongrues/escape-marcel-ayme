@@ -736,7 +736,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     bottom: 30px;
     left: 40px;
     transform: rotate(-3deg);
-    cursor: url("Images/ui/cursorstatic.png"), auto;      
+    cursor: url("Images/ui/cursorflamme.png"), auto;      
     z-index: 5000;
     opacity: 0.5;
 }
@@ -746,9 +746,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 position: fixed;
 bottom: -100px;
 left: 123px;
-cursor: url("Images/ui/cursorstatic.png"), auto;  
 z-index: 5000;
-
 }
 
 

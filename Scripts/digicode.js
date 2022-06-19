@@ -252,6 +252,7 @@ function handleNote (event) {
             setTimeout(() => {
                 // delete img.fire node
                 document.querySelector('#note img.fire').remove();
+                document.querySelector('#note').style.cursor = 'pointer';
             }, 1000);
         }, 1000);
     }, 2000);
