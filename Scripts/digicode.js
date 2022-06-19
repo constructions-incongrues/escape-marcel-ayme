@@ -254,6 +254,7 @@ function initializeDisplay() {
     document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
         document.querySelector('img.paper').style.display = 'none'
         document.querySelector('img.fire').style.display = 'block'
+        document.querySelector('#text-note').style.color = 'black'
         setTimeout(() => {
             document.getElementById('note').style.display = 'none';
         }, 2000);
