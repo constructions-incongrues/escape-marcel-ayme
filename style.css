@@ -137,7 +137,6 @@ body {
 ;
     }
 
-.cursorfire {      cursor: url(Images/ui/cursor.gif), auto;}
 /*
 INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom, font-size handles either equally.
 */
@@ -304,7 +303,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     left: -0.85em;
     line-height: 2.8em;
     position: absolute;
-    cursor: pointer;
+    cursor: pointer!important;
 }
 
 
@@ -679,3 +678,5 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     transform: rotate(-12deg);
     color:#000;
 }
+
+.cursorfire { cursor: url(Images/ui/cursor.gif), auto;}
