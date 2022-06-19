@@ -676,11 +676,10 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     left: 40px;
     transform: rotate(-22deg);
     cursor: url("Images/ui/cursorstatic.png"), auto;      
-    opacity:0.3; 
     z-index: 5000;
 }
 
-#text-note {z-index: 2000;}
+#text-note {display: none;}
 
 .fire {
 position: fixed;
