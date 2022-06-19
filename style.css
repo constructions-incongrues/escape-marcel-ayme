@@ -132,11 +132,12 @@ body {
       height: 100vh;
       background-image: url(Images/ui/wallpaper2.jpg);
       background-size : 100% 100%;;
-      cursor: url(Images/ui/cursor.gif), pointer;
+      overflow: hidden; /* Hide scrollbars */
+
 ;
     }
 
-
+.cursorfire {      cursor: url(Images/ui/cursor.gif), auto;}
 /*
 INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom, font-size handles either equally.
 */
