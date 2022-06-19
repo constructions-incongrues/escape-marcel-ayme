@@ -286,6 +286,7 @@ function initializeDisplay() {
     // camera click
     document.querySelector('#camera').addEventListener('click', function(event) {
         // show poster
+        document.getElementById('bones').style.display = 'none';
         document.querySelector('#camera').classList.toggle('hover');
         document.querySelector('#poster').classList.toggle('hide');
         document.querySelector('#poster video').load();

@@ -110,7 +110,7 @@
     height: 70%;
     top: 69px;
     position: fixed;
-    z-index: 1000;
+    z-index: 0;
     display: none;
 }
 
@@ -473,7 +473,6 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 #typewriter img.hover {
     height: 52%;
-    width: 85%;
     opacity:1;
 }
 
