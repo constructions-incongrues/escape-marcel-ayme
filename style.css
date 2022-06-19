@@ -26,8 +26,8 @@
 
 .vids {
 }
-.camera {
 
+#camera {
     opacity: 0.6;
     height: 55%;
     position: fixed;
@@ -36,9 +36,9 @@
     transform: rotate(-3deg);
 }
 
-.camera:hover {opacity: 1;
-    background-image: url(Images/ui/affiche.png) ;}
-
+#camera:hover {
+    opacity: 1;
+}
 
   /* -----------------------------------
 
@@ -436,7 +436,8 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 
 .hide {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
 }
 
 

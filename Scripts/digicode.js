@@ -266,16 +266,6 @@ function initializeDisplay() {
         document.querySelector('#note').classList.remove('hover');
     })
 
-    // document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
-    //     document.querySelector('img.paper').style.display = 'none'
-    //     document.querySelector('img.fire').style.display = 'block'
-    //     document.querySelector('#text-note').style.color = 'black'
-    //     setTimeout(() => {
-    //         document.getElementById('note').style.display = 'none';
-    //     }, 2000);
-    //     document.getElementById('text-note').style.display = 'none';
-    // })
-
     // Machine
     document.querySelector('#typewriter').addEventListener('mouseover', function(event) {
         document.querySelector('#typewriter img').classList.add('hover');
@@ -304,9 +294,14 @@ function initializeDisplay() {
 
     // camera click
     document.querySelector('#camera').addEventListener('click', function(event) {
-        // show affiche
-        console.log(document.querySelector('#affiche'))
-        document.querySelector('#affiche').classList.remove('hide');
+        // show poster
+        document.querySelector('#poster').classList.remove('hide');
+    })
+
+    // poster click
+    document.querySelector('#poster').addEventListener('click', function(event) {
+        // show vids
+        document.querySelector('#vids').classList.remove('hide');
     })
 }
 
