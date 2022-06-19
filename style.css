@@ -36,6 +36,8 @@
 .vids {
 }
 
+
+
 #camera {
     opacity: 0.6;
     height: 55%;
@@ -43,6 +45,7 @@
     top: 60px;
     left: 50px;
     transform: rotate(-3deg);
+    cursor: url("Images/ui/main_ouverte.png"), auto;
 }
 
 #camera.hover {
@@ -113,6 +116,7 @@
     position: fixed;
     z-index: 0;
     display: none;
+    cursor: url("Images/ui/horrible-fear.png"), auto;
 }
 
 .fade-in {
@@ -175,6 +179,7 @@ html {
 
 body {
     color: var(--golden);
+    cursor: url("Images/ui/main.png"), auto;
     font-family: 'Special Elite', cursive;
     text-align: center;
     background: linear-gradient(to bottom, #d8cfcb, #91919f);
@@ -350,7 +355,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     left: -0.85em;
     line-height: 2.8em;
     position: absolute;
-    cursor: pointer!important;
+    cursor: url("Images/ui/main_ouverte.png"), auto!important;
 }
 
 
@@ -463,6 +468,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     position: fixed;
     top: -40px;
     right: -53px;
+    cursor: url("Images/ui/main_ouverte.png"), auto;
 }
 
 
