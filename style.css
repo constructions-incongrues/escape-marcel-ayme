@@ -1,12 +1,14 @@
 .vids {
-    float: left;
 }
 .camera {
 
-    opacity: 0.7;
-    height: 50%;
-    width: 50%;
-    float:left;
+    opacity: 0.6;
+    height: 55%;
+    /* width: 30%; */
+    position: fixed;
+    top: 60px;
+    left: 50px;
+    transform: rotate(-3deg);
 }
 
 
@@ -685,7 +687,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     position: fixed;
     bottom: 30px;
     left: 40px;
-    transform: rotate(-22deg);
+    transform: rotate(-3deg);
     cursor: url("Images/ui/cursorstatic.png"), auto;      
     z-index: 5000;
     opacity: 0.5;
