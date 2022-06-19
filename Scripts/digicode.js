@@ -173,15 +173,11 @@ function initializeKeys() {
     keys.forEach(key => key.addEventListener('click', handleKeyDown));
     var charList = generateString(18).split('');
     keys.forEach(function(key) {
-        console.log(charList)
         char = charList[Math.floor(Math.random() * charList.length)];
         key.innerText = char;
         charList = charList.filter(function(value) {
-            console.log(value, char) 
             return value != char;
         });
-        console.log(charList)
-
     });
 
     // initialize positions by row, adjusting 
@@ -254,6 +250,15 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
+    document.querySelector('#note img').addEventListener('click', function(event) {
+        console.log(event.target);
+        event.target.style.width = '150%'
+        event.target.style.height = '100%'
+        event.target.src = 'Images/ui/fire-77.gif'
+        setTimeout(() => {
+            document.getElementById('note').style.display = 'none';
+        }, Z000);
+    })
 }
 
 /* ====================================
@@ -1055,3 +1060,4 @@ initializeKeys();
 initializeDisplay();
 
 initializeShaft();
+
