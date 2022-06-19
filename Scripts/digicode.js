@@ -234,6 +234,13 @@ function runDisplayDiagnostic() {
     }, 500);
 }
 
+function note() {
+    document.querySelector('#note').classList.add('hover');
+    setTimeout(() => {
+        handleNote();
+    }, 1000);
+}
+
 function handleNote (event) {
     setTimeout(() => {
         document.querySelector('#note img.fire').classList.remove('hide');
@@ -242,6 +249,10 @@ function handleNote (event) {
         document.querySelector('#note img.paper').classList.add('hide');
         setTimeout(() => {
             document.querySelector('#text-note').classList.remove('hide');
+            setTimeout(() => {
+                // delete img.fire node
+                document.querySelector('#note img.fire').remove();
+            }, 1000);
         }, 1000);
     }, 2000);
 }
@@ -250,15 +261,13 @@ function initializeDisplay() {
     runDisplayDiagnostic();
 
     // Note
-    document.querySelector('#note').addEventListener('mouseover', handleNote)
+    document.querySelector('#note').addEventListener('mouseover', note)
     
     // Note - mouseout remove hover class
     document.querySelector('#note').addEventListener('mouseout', function(event) {
         document.querySelector('#note').classList.remove('hover');
-        document.querySelector('img.fire').classList.add('hide');
-        setTimeout(() => {
-            document.querySelector('#note').removeEventListener('mouseover', handleNote)
-        }, 1000);
+        
+
     })
 
     // document.querySelector('#note img.paper').addEventListener('mouseover', function(event) {
@@ -287,15 +296,15 @@ function initializeDisplay() {
         document.querySelector('#typewriter').style.display = 'none';
     })
 
-    // Camera
-    document.querySelector('#camera').addEventListener('mouseover', function(event) {
-        document.querySelector('#camera img').classList.add('hover');
-    })
+    // // Camera
+    // document.querySelector('#camera').addEventListener('mouseover', function(event) {
+    //     document.querySelector('#camera img').classList.add('hover');
+    // })
 
-    // remove hover class on mouseout  of camera
-    document.querySelector('#camera').addEventListener('mouseout', function(event) {
-        document.querySelector('#camera img').classList.remove('hover');
-    })
+    // // remove hover class on mouseout  of camera
+    // document.querySelector('#camera').addEventListener('mouseout', function(event) {
+    //     document.querySelector('#camera img').classList.remove('hover');
+    // })
 }
 
 /* ====================================
