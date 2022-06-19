@@ -132,6 +132,8 @@ body {
       height: 100vh;
       background-image: url(Images/ui/wallpaper2.jpg);
       background-size : 100% 100%;;
+      cursor: url(Images/ui/cursor.gif), pointer;
+;
     }
 
 
