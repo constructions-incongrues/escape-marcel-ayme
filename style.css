@@ -670,11 +670,10 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 }
 #note:hover {opacity: 1;}
 
-.firefire {
+.fire {
 position: fixed;
 bottom: 30px;
 left: 40px;
-transform: rotate(-22deg);
 cursor: url("Images/ui/cursorstatic.png"), auto;      
 }
 
