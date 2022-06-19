@@ -745,9 +745,9 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 .fire {
 position: fixed;
-bottom: -100px;
-left: 123px;
-z-index: 5000;
+bottom: 30px;
+left: 40px;
+transform: rotate(-3deg);
 }
 
 
