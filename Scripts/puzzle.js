@@ -1539,6 +1539,7 @@
                 content_formatting();
             }, 500);
 
+            document.addEventListener('contextmenu', event => event.preventDefault());
             mediumClick();
         }
     };

@@ -236,6 +236,7 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
     // Note
     document.querySelector('#note').addEventListener('click', 
