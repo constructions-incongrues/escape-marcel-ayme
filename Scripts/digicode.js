@@ -238,12 +238,12 @@ function initializeDisplay() {
     runDisplayDiagnostic();
     // document.addEventListener('contextmenu', event => event.preventDefault());
 
-    var bg = new Howl({
+    window.bg = new Howl({
         src: ['Sounds/digicode-bg.mp3'],
         autoplay: true,
         loop: true,
       });
-      bg.play();
+      window.bg.play();
 
     document.querySelector('#signature').addEventListener('click', function() {
         document.querySelector('#note').classList.remove('hide');
@@ -369,9 +369,10 @@ function handleKeyDown() {
                 e.previousElementSibling.classList.remove("armDown");
                 document.getElementById('bones').style.display = 'block';
                 var skel = new Howl({
-                    src: ['Sounds/squelette..mp3'],
+                    src: ['Sounds/squelette.mp3'],
                     autoplay: false
                   });
+                  window.bg.stop();
                   skel.play();
                 document.querySelector('#poster').classList.add('hide');
             })
