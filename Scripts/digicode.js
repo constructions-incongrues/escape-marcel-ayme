@@ -312,6 +312,7 @@ function initializeDisplay() {
         document.querySelector('#camera').classList.toggle('hover');
         document.querySelector('#poster').classList.toggle('hide');
         document.querySelector('#poster video').load();
+        document.querySelector('#poster video').volume = 0.87;
         // hide prison when video is done
         document.querySelector('#poster video').addEventListener('ended', function(event) {
             document.querySelector('#prison').classList.add('hide');
@@ -320,7 +321,6 @@ function initializeDisplay() {
     
     document.querySelector('#poster').addEventListener('mouseover', function(event) {
         document.querySelector('#poster video').play();
-        bg.pause();
     })
 
     // cinema - mouseover add class hover
