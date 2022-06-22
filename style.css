@@ -772,6 +772,11 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     bottom: 0px;
     position: fixed;
 }
+
+#cinema.hover {
+    opacity: 1;
+}
+
 .fire {
     position: fixed;
     height: 100%!important;
