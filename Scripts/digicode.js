@@ -323,6 +323,21 @@ function initializeDisplay() {
         document.querySelector('#poster video').load();
         sound.play();
     })
+
+    // cinema - mouseover add class hover
+    document.querySelector('#cinema').addEventListener('mouseover', function(event) {
+        document.querySelector('#cinema').classList.add('hover');
+    })
+
+    // cinema - mouseout remove hover class
+    document.querySelector('#cinema').addEventListener('mouseout', function(event) {
+        document.querySelector('#cinema').classList.remove('hover');
+    })
+    
+    // click on cinema to show camera
+    document.querySelector('#cinema').addEventListener('click', function(event) {
+        document.querySelector('#camera').classList.toggle('hide');
+    })
 }
 
 /* ====================================
