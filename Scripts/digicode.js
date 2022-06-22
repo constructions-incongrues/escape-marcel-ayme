@@ -320,7 +320,6 @@ function initializeDisplay() {
     
     document.querySelector('#poster').addEventListener('mouseover', function(event) {
         document.querySelector('#poster video').play();
-        bg.pause();
     })
 
     // cinema - mouseover add class hover
