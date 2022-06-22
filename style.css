@@ -61,7 +61,8 @@ video {
     top: 60px;
     left: 200px;
     transform: rotate(-3deg);
-    cursor: url("Images/ui/main_ouverte.png"), auto;
+    /* cursor: url("Images/ui/main_ouverte.png"), auto; */
+    cursor: pointer;
 }
 
 #camera.hover {
@@ -484,13 +485,15 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     position: fixed;
     top: 0px;
     right: 16px;
-    cursor: url("Images/ui/main_ouverte.png"), auto;
+    /* cursor: url("Images/ui/main_ouverte.png"), auto; */
+    cursor: pointer;
 }
 #typewriter {
     position: fixed;
     top: 0px;
     right: 58px;
-    cursor: url("Images/ui/main_ouverte.png"), auto;
+    /* cursor: url("Images/ui/main_ouverte.png"), auto; */
+    cursor: pointer;
 }
 
 #typewriter img {
