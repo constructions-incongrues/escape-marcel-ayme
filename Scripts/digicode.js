@@ -309,12 +309,6 @@ function initializeDisplay() {
         document.querySelector('#poster video').play();
     })
 
-    // pause video on poster mouseout
-    document.querySelector('#poster').addEventListener('mouseout', function(event) {
-        document.querySelector('#poster video').pause();
-        document.querySelector('#poster video').load();
-    })
-
     // cinema - mouseover add class hover
     document.querySelector('#cinema').addEventListener('mouseover', function(event) {
         document.querySelector('#cinema').classList.add('hover');
