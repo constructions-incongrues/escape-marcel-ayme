@@ -328,6 +328,12 @@ function initializeDisplay() {
     document.querySelector('#cinema').addEventListener('click', function(event) {
         document.querySelector('#camera').classList.toggle('hide');
     })
+
+    var bg = new Howl({
+        src: ['Sounds/digicode-bg.mp3'],
+        autoplay: true
+      });
+      bg.play();
 }
 
 /* ====================================
