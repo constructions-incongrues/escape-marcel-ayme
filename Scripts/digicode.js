@@ -237,13 +237,6 @@ function runDisplayDiagnostic() {
 function initializeDisplay() {
     runDisplayDiagnostic();
 
-    var bg = new Howl({
-      src: ['Sounds/labo.mp3'],
-      autoplay: true,
-      loop: true,
-    });
-    bg.play();
-
     // Note
     document.querySelector('#note').addEventListener('click', 
         function handleNote (event) {
@@ -314,14 +307,12 @@ function initializeDisplay() {
 
     document.querySelector('#poster').addEventListener('mouseover', function(event) {
         document.querySelector('#poster video').play();
-        sound.pause();
     })
 
     // pause video on poster mouseout
     document.querySelector('#poster').addEventListener('mouseout', function(event) {
         document.querySelector('#poster video').pause();
         document.querySelector('#poster video').load();
-        sound.play();
     })
 
     // cinema - mouseover add class hover
