@@ -3,8 +3,13 @@
     position: fixed;
     top: 51px;
     right: 649px;
-    transform: rotate(6deg);
+    /* transform: rotate(6deg); */
     cursor: url("Images/ui/zap.png"), auto;  
+}
+
+#poster video {
+    transform: rotate(0deg);
+
 }
 
 #hideMe {
@@ -466,20 +471,19 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 #prison {
     position: fixed;
-    top: 0;
-    right: 50px;
+    top: 23px;
+    right: 16px;
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
 #typewriter {
     position: fixed;
-    top: -40px;
-    right: -53px;
+    top: 18px;
+    right: 44px;
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
 
 #typewriter img {
-    height: 52%;
-    width: 60%;
+
     opacity:0.6;
 }
 
