@@ -796,10 +796,9 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
   left: 0;
   width: 100px;
   height: 100px;
-  background-color: #ccc;
   border-radius: 3px;
 }
-}
+
 #cinema.hover {
     opacity: 0.7;
 }
