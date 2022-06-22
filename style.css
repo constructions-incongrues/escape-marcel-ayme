@@ -1,10 +1,11 @@
 
 #poster {
-    position: fixed;
+    margin-top: 50px;;
+    /* position: fixed;
     top: 51px;
     right: 649px;
-    /* transform: rotate(6deg); */
-    cursor: url("Images/ui/zap.png"), auto;  
+    transform: rotate(6deg); */
+    /* cursor: url("Images/ui/zap.png"), auto;   */
 }
 
 #poster video {
