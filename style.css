@@ -478,7 +478,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 #typewriter {
     position: fixed;
     top: 0px;
-    right: 44px;
+    right: 58px;
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
 
@@ -772,14 +772,15 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     bottom: 0px;
     position: fixed;
 }
-.fire {
-    position: fixed;
-    height: 100%!important;
-    /* width: 100%!important; */
-    bottom: -29px;
-    left: 127px;
-    transform: rotate(-3deg);
-}
+
+    .fire {
+        position: fixed;
+        height: 100%!important;
+        /* width: 100%!important; */
+        bottom: -29px;
+        left: 127px;
+        transform: rotate(-3deg);
+    }
 
 
 #text-note{
