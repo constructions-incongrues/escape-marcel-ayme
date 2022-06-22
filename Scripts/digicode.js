@@ -365,6 +365,11 @@ function handleKeyDown() {
                 e.classList.remove("roundKiDown");
                 e.previousElementSibling.classList.remove("armDown");
                 document.getElementById('bones').style.display = 'block';
+                var skel = new Howl({
+                    src: ['Sounds/squelette..mp3'],
+                    autoplay: false
+                  });
+                  skel.play();
                 document.querySelector('#poster').classList.add('hide');
             })
             initializeKeys();
