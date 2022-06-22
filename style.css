@@ -48,7 +48,7 @@
     height: 55%;
     position: fixed;
     top: 60px;
-    left: 50px;
+    left: 200px;
     transform: rotate(-3deg);
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
@@ -471,13 +471,13 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 #prison {
     position: fixed;
-    top: 23px;
+    top: 0px;
     right: 16px;
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
 #typewriter {
     position: fixed;
-    top: 18px;
+    top: 0px;
     right: 44px;
     cursor: url("Images/ui/main_ouverte.png"), auto;
 }
@@ -768,10 +768,12 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 
 
 .fire {
-position: fixed;
-bottom: 30px;
-left: 40px;
-transform: rotate(-3deg);
+    position: fixed;
+    height: 100%!important;
+    /* width: 100%!important; */
+    bottom: -29px;
+    left: 127px;
+    transform: rotate(-3deg);
 }
 
 
