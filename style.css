@@ -766,7 +766,12 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     opacity: 0.5;
 }
 
-
+#cinema {
+    opacity: 0.5;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+}
 .fire {
     position: fixed;
     height: 100%!important;
