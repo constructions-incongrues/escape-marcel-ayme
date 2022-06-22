@@ -315,6 +315,7 @@ function initializeDisplay() {
         document.querySelector('#poster video').volume = 0.87;
         // hide prison when video is done
         document.querySelector('#poster video').addEventListener('ended', function(event) {
+            document.querySelector('#poster video').remove();
             document.querySelector('#prison').classList.add('hide');
         })
     })
