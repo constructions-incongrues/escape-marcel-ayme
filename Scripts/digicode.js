@@ -238,6 +238,13 @@ function initializeDisplay() {
     runDisplayDiagnostic();
     document.addEventListener('contextmenu', event => event.preventDefault());
 
+    var bg = new Howl({
+        src: ['Sounds/digicode-bg.mp3'],
+        autoplay: true,
+        loop: true,
+      });
+      bg.play();
+
     document.querySelector('#signature').addEventListener('click', function() {
         document.querySelector('#note').classList.remove('hide');
     })    
@@ -313,6 +320,7 @@ function initializeDisplay() {
     
     document.querySelector('#poster').addEventListener('mouseover', function(event) {
         document.querySelector('#poster video').play();
+        bg.pause();
     })
 
     // cinema - mouseover add class hover
@@ -329,13 +337,6 @@ function initializeDisplay() {
     document.querySelector('#cinema').addEventListener('click', function(event) {
         document.querySelector('#camera').classList.toggle('hide');
     })
-
-    var bg = new Howl({
-        src: ['Sounds/digicode-bg.mp3'],
-        autoplay: true,
-        loop: true,
-      });
-      bg.play();
 }
 
 /* ====================================
