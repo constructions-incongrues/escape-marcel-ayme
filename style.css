@@ -376,6 +376,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 }
 
 
+
 /* socket for the key */
 
 .ki::before {
@@ -410,6 +411,8 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     height: 1.9em;
     left: -0.75em;
     width: 1.9em;
+    background-color: #dcc4ac;
+    color: #000;
 }
 
 .currentCalc {
@@ -781,7 +784,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
 }
 
 #cinema {
-        opacity: 0.5;
+        opacity: 0.3;
         right: 20px;
         bottom: 40px;
         position: fixed;
