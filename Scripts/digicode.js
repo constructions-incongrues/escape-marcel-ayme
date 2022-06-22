@@ -293,10 +293,6 @@ function initializeDisplay() {
     })
     // Display entryPad on click of machine
     document.querySelector('#typewriter').addEventListener('click', function(event) {
-        var typewriter = new Howl({
-            src: ['Sounds/typewriter-sound.mp3'],
-        });
-        typewriter.play()
         document.querySelector('#poster').classList.add('hide');
         document.querySelector('#entryPad').style.display = 'block';
         document.querySelector('#entryPad').style.top = '0';
