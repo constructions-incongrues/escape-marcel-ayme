@@ -332,7 +332,8 @@ function initializeDisplay() {
 
     var bg = new Howl({
         src: ['Sounds/digicode-bg.mp3'],
-        autoplay: true
+        autoplay: true,
+        loop: true,
       });
       bg.play();
 }
