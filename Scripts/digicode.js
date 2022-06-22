@@ -237,6 +237,13 @@ function runDisplayDiagnostic() {
 function initializeDisplay() {
     runDisplayDiagnostic();
 
+    var sound = new Howl({
+      src: ['Sounds/labo.mp3'],
+      autoplay: true,
+      loop: true,
+    });
+    sound.play();
+
     // Note
     document.querySelector('#note').addEventListener('click', 
         function handleNote (event) {
@@ -249,7 +256,6 @@ function initializeDisplay() {
                     setTimeout(() => {
                         document.querySelector('#note img.fire').remove();
                         document.querySelector('#note img.paper').remove();
-                        // document.querySelector('#note').style.cursor = 'pointer';
                     }, 1000);
                 }, 0);
             }, 2000);
@@ -292,30 +298,25 @@ function initializeDisplay() {
         document.querySelector('#poster video').load();
     })
 
-    // click on poster to change video source to video2.mp4
+    // click on poster to play video
     document.querySelector('#poster').addEventListener('click', function(event) {
-        // toggle video source alternate between video.mp4 and video2.mp4
-        if (document.querySelector('#poster video').getAttribute('src') === 'Videos/video.mp4') {
-            document.querySelector('#poster video').setAttribute('src', 'Videos/video2.mp4');
-            document.querySelector('#prison').classList.add('hide');
-        }
-        else {
-            document.querySelector('#poster video').setAttribute('src', 'Videos/video.mp4');
-        }
-        
         // play video
         document.querySelector('#poster video').play();
 
         // hide prison
+        document.querySelector('#prison').classList.add('hide');
+    })
+
+    document.querySelector('#poster').addEventListener('mouseover', function(event) {
+        document.querySelector('#poster video').play();
+        sound.pause();
     })
 
     // pause video on poster mouseout
-    document.querySelector('#poster').addEventListener('mouseover', function(event) {
-        document.querySelector('#poster video').play();
-    })
     document.querySelector('#poster').addEventListener('mouseout', function(event) {
         document.querySelector('#poster video').pause();
         document.querySelector('#poster video').load();
+        sound.play();
     })
 }
 
