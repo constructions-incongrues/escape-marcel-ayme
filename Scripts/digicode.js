@@ -242,7 +242,7 @@ function initializeDisplay() {
         function handleNote (event) {
             document.querySelector('#note img.fire').classList.remove('hide');
             var fire = new Howl({
-                src: ['Sounds/labo.mp3'],
+                src: ['Sounds/fire.mp3'],
             });
             fire.play();
             document.querySelector('#note img.paper').classList.add('hot');
