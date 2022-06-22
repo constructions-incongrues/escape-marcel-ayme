@@ -777,7 +777,7 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     transform: rotate(-3deg);
     cursor: url("Images/ui/cursorflamme.png"), auto;      
     z-index: 5000;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 #cinema {
@@ -787,6 +787,19 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
         position: fixed;
 }
 
+#signature {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+}
 #cinema.hover {
     opacity: 0.7;
 }
@@ -814,6 +827,8 @@ INVESTIGATE: Don't understand why can't use em unit in #title for margin-bottom,
     cursor: url("Images/ui/cursorflammegris.png"), auto;    
     
 }
+
+#text-note:hover {font-size:3rem;width: 800px; height: 500px;;}
 
 body.loading * {
     display: none;
