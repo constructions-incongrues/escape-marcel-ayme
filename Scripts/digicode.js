@@ -255,6 +255,8 @@ function initializeDisplay() {
                         document.querySelector('#note img.fire').remove();
                         document.querySelector('#note img.paper').remove();
                         fire.stop();
+                        // show camera
+                        document.querySelector('#cinema').classList.remove('hide');
                     }, 1000);
                 }, 0);
             }, 2000);
