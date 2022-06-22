@@ -238,6 +238,10 @@ function initializeDisplay() {
     runDisplayDiagnostic();
     document.addEventListener('contextmenu', event => event.preventDefault());
 
+    document.querySelector('#signature').addEventListener('click', function() {
+        document.querySelector('#note').classList.remove('hide');
+    })    
+
     // Note
     document.querySelector('#note').addEventListener('click', 
         function handleNote (event) {
