@@ -237,17 +237,21 @@ function runDisplayDiagnostic() {
 function initializeDisplay() {
     runDisplayDiagnostic();
 
-    var sound = new Howl({
+    var bg = new Howl({
       src: ['Sounds/labo.mp3'],
       autoplay: true,
       loop: true,
     });
-    sound.play();
+    bg.play();
 
     // Note
     document.querySelector('#note').addEventListener('click', 
         function handleNote (event) {
             document.querySelector('#note img.fire').classList.remove('hide');
+            var fire = new Howl({
+                src: ['Sounds/labo.mp3'],
+            });
+            fire.play();
             document.querySelector('#note img.paper').classList.add('hot');
             setTimeout(() => {
                 document.querySelector('#note img.paper').classList.add('hide');
@@ -256,6 +260,7 @@ function initializeDisplay() {
                     setTimeout(() => {
                         document.querySelector('#note img.fire').remove();
                         document.querySelector('#note img.paper').remove();
+                        fire.stop();
                     }, 1000);
                 }, 0);
             }, 2000);
