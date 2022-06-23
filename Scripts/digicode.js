@@ -236,7 +236,7 @@ function runDisplayDiagnostic() {
 
 function initializeDisplay() {
     runDisplayDiagnostic();
-    // document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
     window.bg = new Howl({
         src: ['Sounds/digicode-bg.mp3'],
